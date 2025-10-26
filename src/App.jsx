@@ -104,6 +104,21 @@ export default function WeddingInvitation() {
           .animate-float {
             animation: float 3s ease-in-out infinite;
           }
+          .font-moul {
+            font-family: 'Moul', sans-serif;
+          }
+          .font-nokora {
+            font-family: 'Nokora', sans-serif;
+          }
+          .font-noto-khmer {
+            font-family: 'Noto Sans Khmer', sans-serif;
+          }
+          .font-roboto {
+            font-family: 'Roboto', sans-serif;
+          }
+          .font-fira {
+            font-family: 'Fira Code', monospace;
+          }
         `}</style>
       </div>
     );
@@ -136,17 +151,16 @@ export default function WeddingInvitation() {
               <div className="flex justify-center mb-6">
                 <Heart className="w-16 h-16 text-rose-400 fill-rose-400 animate-pulse" />
               </div>
-              <h1 className="text-5xl md:text-7xl font-serif text-rose-600 mb-4">
-                You're Invited
-              </h1>
+              <h1 className="text-2xl md:text-3xl font-moul text-rose-600 mb-4">
+                សិរីសួរស្តីអាពាហ៏ពិពាហ៍              </h1>
               <p className="text-2xl text-gray-600 font-light italic">
                 To celebrate the wedding of
               </p>
             </div>
 
             <div className="text-center mb-12 animate-fade-in-up" style={{animationDelay: '0.2s'}}>
-              <h2 className="text-4xl md:text-6xl font-serif text-gray-800 mb-2">
-                John & Jane
+              <h2 className="text-4xl md:text-6xl font-moul text-rose-400 mb-2">
+                សុខអាន & សៀវទី
               </h2>
               <div className="flex items-center justify-center gap-4 text-3xl">
                 <span className="text-rose-400">💕</span>
@@ -296,6 +310,21 @@ export default function WeddingInvitation() {
         }
         .animate-fade-in-up {
           animation: fade-in-up 0.8s ease-out;
+        }
+        .font-moul {
+          font-family: 'Moul', sans-serif;
+        }
+        .font-nokora {
+          font-family: 'Nokora', sans-serif;
+        }
+        .font-noto-khmer {
+          font-family: 'Noto Sans Khmer', sans-serif;
+        }
+        .font-roboto {
+          font-family: 'Roboto', sans-serif;
+        }
+        .font-fira {
+          font-family: 'Fira Code', monospace;
         }
       `}</style>
     </div>
