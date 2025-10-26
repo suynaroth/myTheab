@@ -53,8 +53,14 @@ export default function WeddingInvitation() {
     return (
       <div className="min-h-screen bg-gradient-to-br from-rose-100 via-pink-50
        to-purple-100 flex items-center justify-center p-4 overflow-hidden relative">
-      {/* Background image container */}
+    {/* Background image container */}
     <div 
+      className="absolute inset-0 bg-cover md:bg-contain bg-center bg-no-repeat"
+      style={{ 
+        backgroundImage: "url('/images/landing-bg.jpg')"
+      }}
+    ></div>
+    {/* <div 
       className="absolute inset-0"
       style={{ 
         backgroundImage: "url('/images/landing-bg.jpg')",
@@ -62,7 +68,7 @@ export default function WeddingInvitation() {
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat'
       }}
-    ></div>
+    ></div> */}
         {/* <div className="absolute inset-0 bg-black bg-opacity-30"></div> */}
 
         {/* <div className="absolute inset-0 overflow-hidden pointer-events-none">
