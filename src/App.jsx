@@ -65,14 +65,14 @@ export default function WeddingInvitation() {
     ></div>
         {/* <div className="absolute inset-0 bg-black bg-opacity-30"></div> */}
 
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        {/* <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute top-20 left-10 text-6xl animate-bounce opacity-20">💕</div>
           <div className="absolute top-40 right-20 text-5xl animate-pulse opacity-20">✨</div>
           <div className="absolute bottom-32 left-20 text-5xl animate-bounce opacity-20" style={{animationDelay: '1s'}}>💖</div>
           <div className="absolute bottom-20 right-32 text-6xl animate-pulse opacity-20" style={{animationDelay: '2s'}}>🌸</div>
           <div className="absolute top-1/2 left-1/4 text-4xl animate-bounce opacity-20" style={{animationDelay: '1.5s'}}>💐</div>
           <div className="absolute top-1/3 right-1/4 text-5xl animate-pulse opacity-20" style={{animationDelay: '0.5s'}}>🦋</div>
-        </div>
+        </div> */}
 
         <div className="text-center z-10 animate-fade-in">
           <div className="mb-8 animate-float">
