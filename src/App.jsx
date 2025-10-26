@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef ,useEffect} from 'react';
 import { Heart, Calendar, MapPin, Clock, Play, Pause, X } from 'lucide-react';
 
 export default function WeddingInvitation() {
@@ -8,9 +8,25 @@ export default function WeddingInvitation() {
   const [formData, setFormData] = useState({ name: '', guests: '', message: '' });
   const audioRef = useRef(null);
 
+  useEffect(() => {
+    if (showInvitation && audioRef.current) {
+      audioRef.current.play().catch(error => {
+        console.log("Auto-play blocked by browser:", error);
+      });
+      setIsPlaying(true);
+    }
+  }, [showInvitation]);
+
   const handleOpenInvitation = () => {
-    setShowInvitation(true);
-  };
+  setShowInvitation(true);
+  
+  setTimeout(() => {
+    if (audioRef.current) {
+      audioRef.current.play();
+      setIsPlaying(true);
+    }
+  }, 100);
+};
 
   const toggleMusic = () => {
     if (audioRef.current) {
