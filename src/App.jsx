@@ -51,7 +51,20 @@ export default function WeddingInvitation() {
 
   if (!showInvitation) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-rose-100 via-pink-50 to-purple-100 flex items-center justify-center p-4 overflow-hidden relative">
+      <div className="min-h-screen bg-gradient-to-br from-rose-100 via-pink-50
+       to-purple-100 flex items-center justify-center p-4 overflow-hidden relative">
+      {/* Background image container */}
+    <div 
+      className="absolute inset-0"
+      style={{ 
+        backgroundImage: "url('/images/landing-bg.jpg')",
+        backgroundSize: 'contain',  // Changed from 'cover' to 'contain'
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat'
+      }}
+    ></div>
+        {/* <div className="absolute inset-0 bg-black bg-opacity-30"></div> */}
+
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute top-20 left-10 text-6xl animate-bounce opacity-20">💕</div>
           <div className="absolute top-40 right-20 text-5xl animate-pulse opacity-20">✨</div>
