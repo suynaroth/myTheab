@@ -159,7 +159,7 @@ export default function WeddingInvitation() {
             </div>
 
             <div className="text-center mb-12 animate-fade-in-up" style={{animationDelay: '0.2s'}}>
-              <h2 className="text-4xl md:text-6xl font-moul text-rose-400 mb-2">
+              <h2 className="text-3xl md:text-4xl font-moul text-rose-400 mb-2">
                 សុខអាន & សៀវទី
               </h2>
               <div className="flex items-center justify-center gap-4 text-3xl">
