@@ -85,7 +85,7 @@ export default function WeddingInvitation() {
             <Heart className="w-24 h-24 mx-auto text-rose-400 fill-rose-400 animate-pulse" />
           </div>
           
-          <div className="mt-[-20vh] mb-[50vh] backdrop-blur-md bg-white/40 p-8 rounded-2xl">
+          <div className="mt-[-20vh] mb-[20vh] backdrop-blur-md bg-white/40 p-8 rounded-2xl">
             <h1 className="text-6xl md:text-8xl font-serif text-rose-600 mb-4 animate-slide-down">
               Save the Date
             </h1>
