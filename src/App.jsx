@@ -85,9 +85,11 @@ export default function WeddingInvitation() {
             <Heart className="w-24 h-24 mx-auto text-rose-400 fill-rose-400 animate-pulse" />
           </div>
           
-          <h1 className="text-6xl md:text-8xl font-serif text-rose-600 mb-4 animate-slide-down">
-            Save the Date
-          </h1>
+          <div className="mt-[-20vh] mb-[50vh] backdrop-blur-md bg-white/40 p-8 rounded-2xl">
+            <h1 className="text-6xl md:text-8xl font-serif text-rose-600 mb-4 animate-slide-down">
+              Save the Date
+            </h1>
+          </div>
           
           <div className="text-3xl md:text-4xl text-gray-700 mb-3 font-light animate-slide-up" style={{animationDelay: '0.3s'}}>
             We're Getting Married!
@@ -187,7 +189,7 @@ export default function WeddingInvitation() {
                 <Heart className="w-16 h-16 text-rose-400 fill-rose-400 animate-pulse" />
               </div>
               <h1 className="text-2xl md:text-3xl font-moul text-rose-600 mb-4">
-                សិរីសួរស្តីអាពាហ៏ពិពាហ៍              </h1>
+                សិរីមង្គលអាពាហ៏ពិពាហ៍              </h1>
               <p className="text-2xl text-gray-600 font-light italic">
                 To celebrate the wedding of
               </p>
