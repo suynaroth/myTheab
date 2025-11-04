@@ -193,13 +193,13 @@ export default function WeddingInvitation() {
               </p>
               <div className="flex items-center justify-center mt-8 gap-4 sm:gap-6">
                 <h2 className="text-base sm:text-3xl font-moulpali text-rose-600 px-2 drop-shadow-lg whitespace-nowrap">
-                  សុខអាន
+                  គាត សុខអាន
                 </h2>
 
                 <Heart className="w-12 h-12 sm:w-10 sm:h-10 text-rose-400 fill-rose-500 animate-pulse shrink-0" />
 
                 <h2 className="text-base sm:text-3xl font-moulpali text-rose-600 px-2 drop-shadow-lg whitespace-nowrap">
-                  សៀវទី
+                  ថេង សៀវទី
                 </h2>
               </div>
             </div>
