@@ -185,20 +185,20 @@ export default function WeddingInvitation() {
 
             {/* Mobile Only: Title OVER the image */}
             <div className="absolute inset-0 flex flex-col items-center mt-15 text-center px-4 md:hidden">
-              <h1 className="text-2xl sm:text-3xl font-moulpali text-rose-600 mb-3 sm:mb-4 px-2">
+              <h1 className="text-xl sm:text-xl font-moulpali text-rose-600 mb-3 sm:mb-4 px-2">
                 សិរីមង្គលអាពាហ៍ពិពាហ៍
               </h1>
               <p className="text-lg sm:text-xl text-white font-light italic px-2">
                 To celebrate the wedding of
               </p>
               <div className="flex flex-wrap items-center justify-center mt-10 gap-4 sm:gap-6">
-                <h2 className="text-xl sm:text-2xl md:text-3xl font-moulpali text-rose-600 px-2">
+                <h2 className="text-xl sm:text-xl md:text-3xl font-moulpali text-rose-600 px-2">
                   គាត សុខអាន
                 </h2>
 
                 <Heart className="w-12 h-12 sm:w-16 sm:h-16 text-rose-400 fill-rose-500 animate-pulse" />
 
-                <h2 className="text-xl sm:text-2xl md:text-3xl font-moulpali text-rose-600 px-2">
+                <h2 className="text-xl sm:text-xl md:text-3xl font-moulpali text-rose-600 px-2">
                   ថេង សៀវទី
                 </h2>
               </div>
