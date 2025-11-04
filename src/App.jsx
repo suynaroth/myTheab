@@ -178,27 +178,27 @@ export default function WeddingInvitation() {
           {/* Image Container */}
           <div className="relative h-auto md:h-64 lg:h-64">
             <img
-              src="/images/hero-section.jpg"  
+              src="/images/hero-section.jpg"
               className="w-full h-full object-cover"
               alt="Wedding celebration"
             />
 
             {/* Mobile Only: Title OVER the image */}
-            <div className="absolute inset-0 flex flex-col items-center mt-15 text-center px-4 md:hidden">
-              <h1 className="text-xl sm:text-xl font-moulpali text-rose-600 mb-3 sm:mb-4 px-2">
+            <div className="absolute inset-0 flex flex-col items-center justify-start pt-16 text-center px-4 md:hidden">
+              <h1 className="text-xl sm:text-2xl font-moulpali text-rose-600 mb-3 sm:mb-4 px-2 drop-shadow-lg whitespace-nowrap">
                 សិរីមង្គលអាពាហ៍ពិពាហ៍
               </h1>
-              <p className="text-lg sm:text-xl text-white font-light italic px-2">
+              <p className="text-lg sm:text-xl text-white font-light italic px-2 drop-shadow-md">
                 To celebrate the wedding of
               </p>
-              <div className="flex flex-wrap items-center justify-center mt-10 gap-4 sm:gap-6">
-                <h2 className="text-xl sm:text-xl md:text-3xl font-moulpali text-rose-600 px-2">
+              <div className="flex items-center justify-center mt-8 gap-4 sm:gap-6">
+                <h2 className="text-base sm:text-3xl font-moulpali text-rose-600 px-2 drop-shadow-lg whitespace-nowrap">
                   គាត សុខអាន
                 </h2>
 
-                <Heart className="w-12 h-12 sm:w-16 sm:h-16 text-rose-400 fill-rose-500 animate-pulse" />
+                <Heart className="w-12 h-12 sm:w-10 sm:h-10 text-rose-400 fill-rose-500 animate-pulse shrink-0" />
 
-                <h2 className="text-xl sm:text-xl md:text-3xl font-moulpali text-rose-600 px-2">
+                <h2 className="text-base sm:text-3xl font-moulpali text-rose-600 px-2 drop-shadow-lg whitespace-nowrap">
                   ថេង សៀវទី
                 </h2>
               </div>
