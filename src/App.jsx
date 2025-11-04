@@ -56,70 +56,54 @@ export default function WeddingInvitation() {
   if (!showInvitation) {
     return (
       <div
-        className="min-h-screen bg-gradient-to-br from-rose-100 via-pink-50
-       to-purple-100 flex items-center justify-center p-4 overflow-hidden relative"
+        className="min-h-screen bg-linear-to-br from-rose-100 via-pink-50
+       to-purple-100 flex flex-col items-center justify-start p-4 overflow-hidden relative"
       >
         {/* Background image container */}
         <div
-          className="absolute inset-0 bg-cover md:bg-contain bg-center bg-no-repeat"
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: "url('/images/landing-bg.jpg')",
+            backgroundImage: "url('/images/01.jpg')",
           }}
         ></div>
-        {/* <div 
-      className="absolute inset-0"
-      style={{ 
-        backgroundImage: "url('/images/landing-bg.jpg')",
-        backgroundSize: 'contain',  // Changed from 'cover' to 'contain'
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat'
-      }}
-    ></div> */}
-        {/* <div className="absolute inset-0 bg-black bg-opacity-30"></div> */}
 
-        {/* <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-20 left-10 text-6xl animate-bounce opacity-20">💕</div>
-          <div className="absolute top-40 right-20 text-5xl animate-pulse opacity-20">✨</div>
-          <div className="absolute bottom-32 left-20 text-5xl animate-bounce opacity-20" style={{animationDelay: '1s'}}>💖</div>
-          <div className="absolute bottom-20 right-32 text-6xl animate-pulse opacity-20" style={{animationDelay: '2s'}}>🌸</div>
-          <div className="absolute top-1/2 left-1/4 text-4xl animate-bounce opacity-20" style={{animationDelay: '1.5s'}}>💐</div>
-          <div className="absolute top-1/3 right-1/4 text-5xl animate-pulse opacity-20" style={{animationDelay: '0.5s'}}>🦋</div>
-        </div> */}
+        <div className="flex flex-col items-center justify-center flex-1 z-10 px-4">
+          <div className="text-center space-y-6 mb-12 animate-fade-in">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-moul bg-linear-to-r from-rose-400 to-pink-500 bg-clip-text text-transparent animate-slide-down backdrop-blur-sm bg-white/10 p-4 rounded-lg">
+              សិរីមង្គលអាពាហ៏ពិពាហ៍
+            </h1>
+            <div className="text-xl sm:text-2xl md:text-3xl text-pink-500 animate-fade-in space-x-2">
+              <span className="font-noto-khmer">សុខអាន</span>
+              <span className="font-noto-khmer">&</span>
+              <span className="font-noto-khmer">សៀវទី</span>
+            </div>
 
-        <div className="text-center z-10 animate-fade-in">
-          <div className="mb-8 animate-float">
-            <Heart className="w-24 h-24 mx-auto text-rose-400 fill-rose-400 animate-pulse" />
+            <div
+              className="text-2xl sm:text-3xl md:text-4xl font-nokora font-extrabold bg-linear-to-r from-yellow-400 via-yellow-500 to-amber-500 bg-clip-text text-transparent 
+              text-gold-700 drop-shadow-[0_2px_6px_rgba(0,1,0.5,10)] animate-slide-up pt-4"
+            >
+              សូមគោរពអញ្ជើញ
+            </div>
           </div>
 
-          <h1 className="text-6xl md:text-8xl font-serif text-rose-600 mb-4 animate-slide-down mt-[-20vh] backdrop-blur-sm bg-white/30 p-4 rounded-lg">
-            Save the Date
-          </h1>
-
-          <div
-            className="text-3xl md:text-4xl text-gray-700 mb-3 font-light animate-slide-up"
-            style={{ animationDelay: "0.3s" }}
-          >
-            We're Getting Married!
+          <div className="flex flex-col items-center z-10 animate-fade-in" style={{ animationDelay: "0.7s" }}>
+            <button
+              onClick={handleOpenInvitation}
+              className="group relative px-8 sm:px-12 py-4 sm:py-5 bg-linear-to-r from-rose-400 to-pink-500 text-white text-lg sm:text-xl font-semibold rounded-full shadow-2xl
+               hover:shadow-rose-300 transition-all duration-300 hover:scale-110 animate-slide-up overflow-hidden active:scale-95"
+            >
+              <span className="relative z-10 font-nokora flex items-center gap-2 sm:gap-3">
+                បើកធៀប
+                <Heart className="w-5 h-5 sm:w-6 sm:h-6 group-hover:animate-ping" />
+              </span>
+              <div className="absolute inset-0 bg-linear-to-r from-pink-500 to-rose-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            </button>
+            <div
+              className="text-base sm:text-xl md:text-2xl font-nokora text-white mt-4 sm:mt-5 italic animate-slide-up"
+            >
+              សូមចុចប៊ូតុងដើម្បីបើកធៀប
+            </div>
           </div>
-
-          <div
-            className="text-xl md:text-2xl text-gray-600 mb-12 font-serif italic animate-slide-up"
-            style={{ animationDelay: "0.5s" }}
-          >
-            Join us in celebrating our special day
-          </div>
-
-          <button
-            onClick={handleOpenInvitation}
-            className="group relative px-12 py-5 bg-gradient-to-r from-rose-400 to-pink-500 text-white text-xl font-semibold rounded-full shadow-2xl hover:shadow-rose-300 transition-all duration-300 hover:scale-110 animate-slide-up overflow-hidden"
-            style={{ animationDelay: "0.7s" }}
-          >
-            <span className="relative z-10 flex items-center gap-3">
-              Open Invitation
-              <Heart className="w-6 h-6 group-hover:animate-ping" />
-            </span>
-            <div className="absolute inset-0 bg-gradient-to-r from-pink-500 to-rose-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-          </button>
         </div>
 
         <style>{`
@@ -128,11 +112,11 @@ export default function WeddingInvitation() {
             to { opacity: 1; }
           }
           @keyframes slide-down {
-            from { transform: translateY(-50px); opacity: 0; }
+            from { transform: translateY(-30px); opacity: 0; }
             to { transform: translateY(0); opacity: 1; }
           }
           @keyframes slide-up {
-            from { transform: translateY(50px); opacity: 0; }
+            from { transform: translateY(30px); opacity: 0; }
             to { transform: translateY(0); opacity: 1; }
           }
           @keyframes float {
@@ -172,16 +156,16 @@ export default function WeddingInvitation() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 via-pink-50 to-rose-50 p-4 md:p-8">
-      <div className="fixed top-4 right-4 z-50">
+    <div className="min-h-screen bg-linear-to-br from-purple-50 via-pink-50 to-rose-50 p-4 md:p-8">
+      <div className="fixed top-2 right-2 sm:top-4 sm:right-4 z-50">
         <button
           onClick={toggleMusic}
-          className="bg-white p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110"
+          className="bg-white p-3 sm:p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 active:scale-95"
         >
           {isPlaying ? (
-            <Pause className="w-6 h-6 text-rose-500" />
+            <Pause className="w-5 h-5 sm:w-6 sm:h-6 text-rose-500" />
           ) : (
-            <Play className="w-6 h-6 text-rose-500" />
+            <Play className="w-5 h-5 sm:w-6 sm:h-6 text-rose-500" />
           )}
         </button>
         <audio ref={audioRef} loop>
@@ -190,75 +174,114 @@ export default function WeddingInvitation() {
       </div>
 
       <div className="max-w-4xl mx-auto">
-        <div className="bg-white rounded-3xl shadow-2xl overflow-hidden animate-scale-in">
-          <div className="bg-gradient-to-r from-rose-400 via-pink-400 to-purple-400 h-3"></div>
+        <div className="relative rounded-3xl shadow-2xl overflow-hidden animate-scale-in z-10 bg-white">
+          {/* Image Container */}
+          <div className="relative h-auto md:h-64 lg:h-64">
+            <img
+              src="/images/hero-section.jpg"  
+              className="w-full h-full object-cover"
+              alt="Wedding celebration"
+            />
 
-          <div className="p-8 md:p-12">
-            <div className="text-center mb-12 animate-fade-in-up">
-              <div className="flex justify-center mb-6">
-                <Heart className="w-16 h-16 text-rose-400 fill-rose-400 animate-pulse" />
-              </div>
-              <h1 className="text-2xl md:text-3xl font-moul text-rose-600 mb-4">
-                សិរីមង្គលអាពាហ៏ពិពាហ៍{" "}
+            {/* Mobile Only: Title OVER the image */}
+            <div className="absolute inset-0 flex flex-col items-center mt-15 text-center px-4 md:hidden">
+              <h1 className="text-2xl sm:text-3xl font-moulpali text-rose-600 mb-3 sm:mb-4 px-2">
+                សិរីមង្គលអាពាហ៍ពិពាហ៍
               </h1>
-              <p className="text-2xl text-gray-600 font-light italic">
+              <p className="text-lg sm:text-xl text-white font-light italic px-2">
                 To celebrate the wedding of
               </p>
-            </div>
+              <div className="flex flex-wrap items-center justify-center mt-10 gap-4 sm:gap-6">
+                <h2 className="text-xl sm:text-2xl md:text-3xl font-moulpali text-rose-600 px-2">
+                  គាត សុខអាន
+                </h2>
 
-            <div
-              className="text-center mb-12 animate-fade-in-up"
-              style={{ animationDelay: "0.2s" }}
-            >
-              <h2 className="text-2xl md:text-3xl font-moul text-rose-400 mb-2">
-                សុខអាន & សៀវទី
-              </h2>
-              <div className="flex items-center justify-center gap-4 text-3xl">
-                <span className="text-rose-400">💕</span>
-                <span className="text-purple-400">✨</span>
-                <span className="text-pink-400">💖</span>
+                <Heart className="w-12 h-12 sm:w-16 sm:h-16 text-rose-400 fill-rose-500 animate-pulse" />
+
+                <h2 className="text-xl sm:text-2xl md:text-3xl font-moulpali text-rose-600 px-2">
+                  ថេង សៀវទី
+                </h2>
+              </div>
+            </div>
+          </div>
+
+          {/* Desktop Only: Title BELOW the image */}
+          <div className="hidden md:block text-center py-10 px-4">
+            <h1 className="text-3xl lg:text-4xl font-moulpali text-rose-600 mb-4 px-2">
+              សិរីមង្គលអាពាហ៍ពិពាហ៍
+            </h1>
+            <p className="text-xl lg:text-2xl text-gray-600 font-light italic px-2">
+              To celebrate the wedding of
+            </p>
+          </div>
+          <div className="p-6 sm:p-8 md:p-12">
+
+
+            <div className="flex flex-col items-center justify-center text-center mb-8 sm:mb-12 animate-fade-in-up space-y-4 sm:space-y-6" style={{ animationDelay: "0.2s" }}>
+              {/* Header names */}
+              <div className="flex flex-wrap justify-center gap-6">
+                <h2 className="text-l sm:text-xl md:text-xl font-moulpali text-rose-400 px-2">
+                  កូនប្រុសនាម
+                </h2>
+
+                <h2 className="text-l sm:text-xl md:text-xl font-moulpali text-rose-400 px-2">
+                  កូនស្រីនាម
+                </h2>
+              </div>
+
+              {/* Actual names with heart */}
+              <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6">
+                <h2 className="text-xl sm:text-2xl md:text-3xl font-moulpali text-rose-400 px-2">
+                  គាត សុខអាន
+                </h2>
+
+                <Heart className="w-12 h-12 sm:w-16 sm:h-16 text-rose-400 fill-rose-400 animate-pulse" />
+
+                <h2 className="text-xl sm:text-2xl md:text-3xl font-moulpali text-rose-400 px-2">
+                  ថេង សៀវទី
+                </h2>
               </div>
             </div>
 
             <div
-              className="bg-gradient-to-r from-rose-50 to-purple-50 rounded-2xl p-8 mb-12 animate-fade-in-up"
+              className="bg-gradient-to-r from-rose-50 to-purple-50 rounded-xl sm:rounded-2xl p-6 sm:p-8 mb-8 sm:mb-12 animate-fade-in-up"
               style={{ animationDelay: "0.4s" }}
             >
-              <div className="space-y-6">
-                <div className="flex items-center gap-4">
-                  <Calendar className="w-8 h-8 text-rose-500" />
+              <div className="space-y-4 sm:space-y-6">
+                <div className="flex items-start sm:items-center gap-3 sm:gap-4">
+                  <Calendar className="w-6 h-6 sm:w-8 sm:h-8 text-rose-500 flex-shrink-0 mt-1 sm:mt-0" />
                   <div>
-                    <p className="text-sm text-gray-500 uppercase tracking-wider">
-                      Date
+                    <p className="text-xs sm:text-sm font-nokora text-gray-500 uppercase tracking-wider">
+                      កាលបរិច្ឆេទ
                     </p>
-                    <p className="text-xl text-gray-800 font-semibold">
-                      Saturday, December 15, 2025
+                    <p className="text-base sm:text-lg md:text-xl font-nokora text-gray-800 font-semibold">
+                      ថ្ងៃច័ន្ទ ទី​២៩ ខែធ្នូ ឆ្នាំ២០២៥
                     </p>
                   </div>
                 </div>
 
-                <div className="flex items-center gap-4">
-                  <Clock className="w-8 h-8 text-rose-500" />
-                  <div>
-                    <p className="text-sm text-gray-500 uppercase tracking-wider">
-                      Time
+                <div className="flex items-start sm:items-center gap-3 sm:gap-4">
+                  <Clock className="w-6 h-6 sm:w-8 sm:h-8 text-rose-500 flex-shrink-0 mt-1 sm:mt-0" />
+                  <div className="font-nokora">
+                    <p className="text-xs sm:text-sm text-gray-500 uppercase tracking-wider">
+                      កម្មវិធីចាប់ផ្តើមពីម៉ោង
                     </p>
-                    <p className="text-xl text-gray-800 font-semibold">
-                      4:00 PM - 10:00 PM
+                    <p className="text-base sm:text-lg md:text-xl text-gray-800 font-semibold">
+                      ៥ល្ងាចតទៅ
                     </p>
                   </div>
                 </div>
 
-                <div className="flex items-center gap-4">
-                  <MapPin className="w-8 h-8 text-rose-500" />
-                  <div>
-                    <p className="text-sm text-gray-500 uppercase tracking-wider">
-                      Venue
+                <div className="flex items-start sm:items-center gap-3 sm:gap-4">
+                  <MapPin className="w-6 h-6 sm:w-8 sm:h-8 text-rose-500 flex-shrink-0 mt-1 sm:mt-0" />
+                  <div className="font-nokora">
+                    <p className="text-xs sm:text-sm text-gray-500 uppercase tracking-wider">
+                      ទីតាំងកម្មវិធី
                     </p>
-                    <p className="text-xl text-gray-800 font-semibold">
-                      Grand Ballroom, The Royal Hotel
+                    <p className="text-base sm:text-lg md:text-xl text-gray-800 font-semibold">
+                      ខេត្តក្រចេះ
                     </p>
-                    <p className="text-gray-600">
+                    <p className="text-sm sm:text-base text-gray-600">
                       123 Wedding Street, City, State 12345
                     </p>
                   </div>
@@ -267,32 +290,32 @@ export default function WeddingInvitation() {
             </div>
 
             <div
-              className="mb-12 animate-fade-in-up"
+              className="mb-8 sm:mb-12 animate-fade-in-up"
               style={{ animationDelay: "0.6s" }}
             >
-              <h3 className="text-3xl font-serif text-center text-gray-800 mb-6">
+              <h3 className="text-2xl sm:text-3xl font-serif text-center text-gray-800 mb-4 sm:mb-6 px-2">
                 Our Journey
               </h3>
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4">
                 {[1, 2, 3, 4].map((i) => (
                   <div
                     key={i}
-                    className="aspect-square bg-gradient-to-br from-rose-200 to-purple-200 rounded-2xl hover:scale-105 transition-transform duration-300 cursor-pointer shadow-lg hover:shadow-xl flex items-center justify-center text-6xl"
+                    className="aspect-square bg-gradient-to-br from-rose-200 to-purple-200 rounded-xl sm:rounded-2xl hover:scale-105 active:scale-95 transition-transform duration-300 cursor-pointer shadow-lg hover:shadow-xl flex items-center justify-center text-4xl sm:text-6xl"
                   >
                     📷
                   </div>
                 ))}
               </div>
-              <p className="text-center text-gray-500 text-sm mt-4">
+              <p className="text-center text-gray-500 text-xs sm:text-sm mt-3 sm:mt-4 px-2">
                 Click to add your photos
               </p>
             </div>
 
             <div
-              className="text-center mb-12 animate-fade-in-up"
+              className="text-center mb-8 sm:mb-12 animate-fade-in-up px-4"
               style={{ animationDelay: "0.8s" }}
             >
-              <p className="text-xl text-gray-700 italic leading-relaxed max-w-2xl mx-auto">
+              <p className="text-base sm:text-lg md:text-xl text-gray-700 italic leading-relaxed max-w-2xl mx-auto">
                 "Love is not about how many days, months, or years you have been
                 together. Love is about how much you love each other every
                 single day."
@@ -300,46 +323,46 @@ export default function WeddingInvitation() {
             </div>
 
             <div
-              className="text-center animate-fade-in-up"
+              className="text-center animate-fade-in-up px-4"
               style={{ animationDelay: "1s" }}
             >
               <button
                 onClick={() => setShowRSVP(true)}
-                className="px-12 py-5 bg-gradient-to-r from-rose-500 to-pink-500 text-white text-xl font-semibold rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105"
+                className="px-8 sm:px-12 py-4 sm:py-5 bg-gradient-to-r from-rose-500 to-pink-500 text-white text-lg sm:text-xl font-semibold rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 active:scale-95 w-full sm:w-auto"
               >
                 RSVP Now
               </button>
             </div>
 
             <div
-              className="text-center mt-12 animate-fade-in-up"
+              className="text-center mt-8 sm:mt-12 animate-fade-in-up px-4"
               style={{ animationDelay: "1.2s" }}
             >
-              <p className="text-gray-600 italic">
+              <p className="text-sm sm:text-base text-gray-600 italic">
                 We can't wait to celebrate with you!
               </p>
-              <div className="text-4xl mt-4 animate-pulse">💑</div>
+              <div className="text-3xl sm:text-4xl mt-3 sm:mt-4 animate-pulse">💑</div>
             </div>
           </div>
         </div>
       </div>
 
       {showRSVP && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50 animate-fade-in">
-          <div className="bg-white rounded-3xl p-8 max-w-md w-full shadow-2xl animate-scale-in">
-            <div className="flex justify-between items-center mb-6">
-              <h3 className="text-3xl font-serif text-gray-800">RSVP</h3>
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-3 sm:p-4 z-50 animate-fade-in">
+          <div className="bg-white rounded-2xl sm:rounded-3xl p-6 sm:p-8 max-w-md w-full shadow-2xl animate-scale-in max-h-[90vh] overflow-y-auto">
+            <div className="flex justify-between items-center mb-4 sm:mb-6">
+              <h3 className="text-2xl sm:text-3xl font-serif text-gray-800">RSVP</h3>
               <button
                 onClick={() => setShowRSVP(false)}
-                className="text-gray-400 hover:text-gray-600"
+                className="text-gray-400 hover:text-gray-600 p-1 rounded-full hover:bg-gray-100 active:scale-95 transition-all"
               >
                 <X className="w-6 h-6" />
               </button>
             </div>
 
-            <div className="space-y-4">
+            <div className="space-y-3 sm:space-y-4">
               <div>
-                <label className="block text-gray-700 mb-2 font-semibold">
+                <label className="block text-gray-700 mb-2 font-semibold text-sm sm:text-base">
                   Your Name *
                 </label>
                 <input
@@ -348,13 +371,13 @@ export default function WeddingInvitation() {
                   onChange={(e) =>
                     setFormData({ ...formData, name: e.target.value })
                   }
-                  className="w-full px-4 py-3 border-2 border-rose-200 rounded-xl focus:border-rose-400 focus:outline-none transition-colors"
+                  className="w-full px-3 sm:px-4 py-2.5 sm:py-3 border-2 border-rose-200 rounded-xl focus:border-rose-400 focus:outline-none transition-colors text-sm sm:text-base"
                   placeholder="Enter your name"
                 />
               </div>
 
               <div>
-                <label className="block text-gray-700 mb-2 font-semibold">
+                <label className="block text-gray-700 mb-2 font-semibold text-sm sm:text-base">
                   Number of Guests *
                 </label>
                 <input
@@ -364,29 +387,28 @@ export default function WeddingInvitation() {
                   onChange={(e) =>
                     setFormData({ ...formData, guests: e.target.value })
                   }
-                  className="w-full px-4 py-3 border-2 border-rose-200 rounded-xl focus:border-rose-400 focus:outline-none transition-colors"
+                  className="w-full px-3 sm:px-4 py-2.5 sm:py-3 border-2 border-rose-200 rounded-xl focus:border-rose-400 focus:outline-none transition-colors text-sm sm:text-base"
                   placeholder="1"
                 />
               </div>
 
               <div>
-                <label className="block text-gray-700 mb-2 font-semibold">
+                <label className="block text-gray-700 mb-2 font-semibold text-sm sm:text-base">
                   Message (Optional)
                 </label>
-                <input
-                  type="text"
+                <textarea
                   value={formData.message}
                   onChange={(e) =>
                     setFormData({ ...formData, message: e.target.value })
                   }
-                  className="w-full px-4 py-3 border-2 border-rose-200 rounded-xl focus:border-rose-400 focus:outline-none transition-colors h-24"
+                  className="w-full px-3 sm:px-4 py-2.5 sm:py-3 border-2 border-rose-200 rounded-xl focus:border-rose-400 focus:outline-none transition-colors h-20 sm:h-24 text-sm sm:text-base resize-none"
                   placeholder="Your wishes for the couple..."
                 />
               </div>
 
               <button
                 onClick={handleSubmitRSVP}
-                className="w-full py-4 bg-gradient-to-r from-rose-500 to-pink-500 text-white font-semibold rounded-xl hover:shadow-lg transition-all duration-300 hover:scale-105"
+                className="w-full py-3 sm:py-4 bg-gradient-to-r from-rose-500 to-pink-500 text-white font-semibold rounded-xl hover:shadow-lg transition-all duration-300 hover:scale-105 active:scale-95 text-sm sm:text-base"
               >
                 Submit RSVP
               </button>
@@ -404,27 +426,30 @@ export default function WeddingInvitation() {
           from { transform: translateY(30px); opacity: 0; }
           to { transform: translateY(0); opacity: 1; }
         }
+        @keyframes fade-in {
+          from { opacity: 0; }
+          to { opacity: 1; }
+        }
         .animate-scale-in {
           animation: scale-in 0.5s ease-out;
         }
         .animate-fade-in-up {
           animation: fade-in-up 0.8s ease-out;
         }
+        .animate-fade-in {
+          animation: fade-in 0.3s ease-out;
+        }
+        @import url('https://fonts.googleapis.com/css2?family=Moul&family=Nokora:wght@400;700&display=swap');
         .font-moul {
           font-family: 'Moul', sans-serif;
         }
         .font-nokora {
           font-family: 'Nokora', sans-serif;
         }
-        .font-noto-khmer {
-          font-family: 'Noto Sans Khmer', sans-serif;
+        .font-moulpali {
+          font-family: 'Moulpali', sans-serif;
         }
-        .font-roboto {
-          font-family: 'Roboto', sans-serif;
-        }
-        .font-fira {
-          font-family: 'Fira Code', monospace;
-        }
+        
       `}</style>
     </div>
   );
