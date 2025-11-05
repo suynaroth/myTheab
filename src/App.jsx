@@ -69,7 +69,7 @@ export default function WeddingInvitation() {
 
         <div className="flex flex-col items-center justify-between flex-1 z-10 w-full max-w-2xl py-4 sm:py-8">
           <div className="text-center space-y-3 sm:space-y-6 animate-fade-in">
-            <h1 className="text-xl sm:text-3xl whitespace-nowrap font-moulpali bg-linear-to-r from-yellow-300 via-yellow-400 to-amber-300 bg-clip-text text-transparent animate-slide-down bg-white/10 p-3 sm:p-4 rounded-lg">
+            <h1 className="text-2xl sm:text-3xl whitespace-nowrap font-moulpali bg-linear-to-r from-yellow-300 via-yellow-400 to-amber-300 bg-clip-text text-transparent animate-slide-down bg-white/10 p-3 sm:p-4 rounded-lg">
               សិរីមង្គលអាពាហ៏ពិពាហ៍
             </h1>
             <div className="text-lg sm:text-2xl md:text-3xl text-pink-500 animate-fade-in space-x-2">
@@ -79,8 +79,8 @@ export default function WeddingInvitation() {
             </div>
 
             <div
-              className="text-xl sm:text-3xl md:text-4xl font-nokora font-extrabold bg-linear-to-r from-yellow-400 via-yellow-500 to-amber-500 bg-clip-text text-transparent 
-        text-gold-700 drop-shadow-[0_2px_6px_rgba(0,1,0.5,10)] animate-slide-up pt-2 sm:pt-4"
+              className="text-2xl sm:text-3xl md:text-4xl font-nokora font-extrabold bg-linear-to-r from-yellow-400 via-yellow-500 to-amber-500 bg-clip-text text-transparent 
+            text-gold-700 drop-shadow-[0_2px_6px_rgba(0,1,0.5,10)] animate-slide-up pt-2 sm:pt-4"
             >
               សូមគោរពអញ្ជើញ
             </div>
@@ -90,7 +90,7 @@ export default function WeddingInvitation() {
             <button
               onClick={handleOpenInvitation}
               className="group relative px-8 sm:px-12 py-3 sm:py-5 bg-linear-to-r from-rose-400 to-pink-500 text-white text-base sm:text-xl font-semibold rounded-full shadow-2xl
-         hover:shadow-rose-300 transition-all duration-300 hover:scale-110 animate-slide-up overflow-hidden active:scale-95"
+               hover:shadow-rose-300 transition-all duration-300 hover:scale-110 animate-slide-up overflow-hidden active:scale-95"
             >
               <span className="relative z-10 font-nokora flex items-center gap-2 sm:gap-3">
                 បើកធៀប
@@ -99,7 +99,7 @@ export default function WeddingInvitation() {
               <div className="absolute inset-0 bg-linear-to-r from-pink-500 to-rose-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </button>
             <div
-              className="text-sm sm:text-xl md:text-2xl font-nokora text-white mt-3 sm:mt-5 italic animate-slide-up"
+              className="text-base sm:text-xl md:text-2xl font-nokora text-white mt-3 sm:mt-5 italic animate-slide-up"
             >
               សូមចុចប៊ូតុងដើម្បីបើកធៀប
             </div>
