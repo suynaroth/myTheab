@@ -135,7 +135,7 @@ export default function WeddingInvitation() {
               សិរីមង្គលអាពាហ៏ពិពាហ៍
             </h1>
             <div className="item-center mt-5 animate-fade-in">
-              <img src="/images/mark.png" alt="mark" className="w-56 sm:w-56 mx-auto animate-float" />
+              <img src="/images/wedding-mark.png" alt="mark" className="w-56 sm:w-56 mx-auto animate-float" />
             </div>
 
             <div
