@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
-import { Heart, Calendar, MapPin, Clock, Play, Pause, X } from "lucide-react";
+import { Heart, Calendar, MapPin, Clock, Play, Pause, X, ChevronLeft, ChevronRight } from "lucide-react";
 
 export default function WeddingInvitation() {
   const [showInvitation, setShowInvitation] = useState(false);
@@ -52,6 +52,68 @@ export default function WeddingInvitation() {
       alert("Please fill in all required fields");
     }
   };
+  const images = [
+    { url: 'images/1.jpg', alt: 'Mountain landscape' },
+    { url: 'images/01.jpg', alt: 'Forest path' },
+    { url: 'images/02.jpg', alt: 'Desert sunset' },
+    { url: 'images/03.jpg', alt: 'Ocean waves' },
+    { url: 'images/04.jpg', alt: 'Canyon vista' }
+  ];
+
+  const [current, setCurrent] = useState(0);
+  const [touchStart, setTouchStart] = useState(0);
+  const [touchEnd, setTouchEnd] = useState(0);
+  const [isSlidePlaying, setIsSlidePlaying] = useState(true);
+  const slideRef = useRef(null);
+
+  const minSwipeDistance = 50;
+  const autoPlayDuration = 3000; // 3 seconds
+
+  // Auto-play functionality
+  useEffect(() => {
+    if (!isPlaying) return;
+
+    const interval = setInterval(() => {
+      nextSlide();
+    }, autoPlayDuration);
+
+    return () => clearInterval(interval);
+  }, [current, isPlaying]);
+
+  const nextSlide = () => {
+    setCurrent((prev) => (prev === images.length - 1 ? 0 : prev + 1));
+  };
+
+  const prevSlide = () => {
+    setCurrent((prev) => (prev === 0 ? images.length - 1 : prev - 1));
+  };
+
+  const goToSlide = (index) => {
+    setCurrent(index);
+  };
+
+  const onTouchStart = (e) => {
+    setTouchEnd(0);
+    setTouchStart(e.targetTouches[0].clientX);
+  };
+
+  const onTouchMove = (e) => {
+    setTouchEnd(e.targetTouches[0].clientX);
+  };
+
+  const onTouchEnd = () => {
+    if (!touchStart || !touchEnd) return;
+
+    const distance = touchStart - touchEnd;
+    const isLeftSwipe = distance > minSwipeDistance;
+    const isRightSwipe = distance < -minSwipeDistance;
+
+    if (isLeftSwipe) {
+      nextSlide();
+    } else if (isRightSwipe) {
+      prevSlide();
+    }
+  };
 
   if (!showInvitation) {
     return (
@@ -72,10 +134,8 @@ export default function WeddingInvitation() {
             <h1 className="text-2xl sm:text-3xl whitespace-nowrap font-moulpali bg-linear-to-r from-yellow-300 via-yellow-400 to-amber-300 bg-clip-text text-transparent animate-slide-down bg-white/10 p-3 sm:p-4 rounded-lg">
               សិរីមង្គលអាពាហ៏ពិពាហ៍
             </h1>
-            <div className="text-lg sm:text-2xl md:text-3xl text-pink-500 animate-fade-in space-x-2">
-              <span className="font-noto-khmer">សុខអាន</span>
-              <span className="font-noto-khmer">&</span>
-              <span className="font-noto-khmer">សៀវទី</span>
+            <div className="item-center mt-5 animate-fade-in">
+              <img src="/images/mark.png" alt="mark" className="w-56 sm:w-56 mx-auto animate-float" />
             </div>
 
             <div
@@ -257,7 +317,7 @@ export default function WeddingInvitation() {
               ឯកឧត្តម លោកជំទាវ អ្នកឧកញ៉ា ឧកញ៉ា​ លោក លោកស្រី​ អ្នកនាង កញ្ញា អញ្ជើញចូលរួមជាភ្ញៀវកិត្តិយស ដើម្បីប្រសិទ្ធពរជ័យ សិរីសួស្តីក្នុងកម្មពិធីសិរីមង្គលអាពាហ៍ពិពាហ៍យើងខ្ញុំ
             </p>
             <div
-              className="bg-linear-to-r from-rose-50 to-purple-50 rounded-xl sm:rounded-2xl p-6 sm:p-8 mb-8 sm:mb-12 animate-fade-in-up"
+              className="bg-linear-to-r from-rose-50 to-purple-50 rounded-xl sm:rounded-2xl p-6 sm:p-8 animate-fade-in-up"
               style={{ animationDelay: "0.4s" }}
             >
               <div className="space-y-4 sm:space-y-6">
@@ -301,8 +361,7 @@ export default function WeddingInvitation() {
                 </div>
               </div>
             </div>
-
-            <div
+            {/* <div
               className="mb-8 sm:mb-12 animate-fade-in-up"
               style={{ animationDelay: "0.6s" }}
             >
@@ -322,21 +381,68 @@ export default function WeddingInvitation() {
               <p className="text-center text-gray-500 text-xs sm:text-sm mt-3 sm:mt-4 px-2">
                 Click to add your photos
               </p>
+            </div> */}
+          </div>
+          <div>
+            <div className="relative bg-transparent shadow-2xl overflow-hidden">
+              {/* Slideshow Container */}
+              <div
+                ref={slideRef}
+                className="relative aspect-video overflow-hidden"
+                onTouchStart={onTouchStart}
+                onTouchMove={onTouchMove}
+                onTouchEnd={onTouchEnd}
+              >
+                {images.map((img, index) => (
+                  <div
+                    key={index}
+                    className={`absolute inset-0 transition-opacity duration-500 ease-in-out ${index === current ? 'opacity-100' : 'opacity-0'
+                      }`}
+                  >
+                    <img
+                      src={img.url}
+                      alt={img.alt}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                ))}
+
+                {/* Navigation Buttons */}
+                <button
+                  onClick={prevSlide}
+                  className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/30 backdrop-blur-sm rounded-full p-3 transition-all duration-200 group"
+                  aria-label="Previous slide"
+                >
+                  <ChevronLeft className="w-4 h-4 text-white" />
+                </button>
+
+                <button
+                  onClick={nextSlide}
+                  className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/30 backdrop-blur-sm rounded-full p-3 transition-all duration-200 group"
+                  aria-label="Next slide"
+                >
+                  <ChevronRight className="w-4 h-4 text-white" />
+                </button>
+
+                {/* Dot Indicators */}
+                <div className="absolute inset-x-0 bottom-0 z-10 flex justify-center gap-2 py-4 bg-transparent">
+                  {images.map((_, index) => (
+                    <button
+                      key={index}
+                      onClick={() => goToSlide(index)}
+                      className={`h-2 rounded-full transition-all duration-300 ${index === current
+                        ? 'w-8 bg-white'
+                        : 'w-2 bg-white/40 hover:bg-white/60'
+                        }`}
+                      aria-label={`Go to slide ${index + 1}`}
+                    />
+                  ))}
+                </div>
+              </div>
             </div>
 
             <div
-              className="text-center mb-8 sm:mb-12 animate-fade-in-up px-4"
-              style={{ animationDelay: "0.8s" }}
-            >
-              <p className="text-base sm:text-lg md:text-xl text-gray-700 italic leading-relaxed max-w-2xl mx-auto">
-                "Love is not about how many days, months, or years you have been
-                together. Love is about how much you love each other every
-                single day."
-              </p>
-            </div>
-
-            <div
-              className="text-center animate-fade-in-up px-4"
+              className="text-center mt-5 animate-fade-in-up px-4"
               style={{ animationDelay: "1s" }}
             >
               <button
