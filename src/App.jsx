@@ -69,7 +69,7 @@ export default function WeddingInvitation() {
 
         <div className="flex flex-col items-center justify-start flex-1 z-10 px-4">
           <div className="text-center space-y-6 mb-12 animate-fade-in">
-            <h1 className="text-xl sm:text-xl md:text-3xl mt-10 font-moulpali bg-linear-to-r from-yellow-300 via-yellow-400 to-amber-300 bg-clip-text text-transparent animate-slide-down bg-white/10 p-4 rounded-lg">
+            <h1 className="text-2xl sm:text-3xl whitespace-nowrap mt-10 font-moulpali bg-linear-to-r from-yellow-300 via-yellow-400 to-amber-300 bg-clip-text text-transparent animate-slide-down bg-white/10 p-4 rounded-lg">
               សិរីមង្គលអាពាហ៏ពិពាហ៍
             </h1>
             <div className="text-xl sm:text-2xl md:text-3xl mt-20 text-pink-500 animate-fade-in space-x-2">
@@ -86,7 +86,7 @@ export default function WeddingInvitation() {
             </div>
           </div>
 
-          <div className="flex flex-col mt-95 items-center z-10 animate-fade-in" style={{ animationDelay: "0.7s" }}>
+          <div className="flex flex-col mt-60 items-center z-10 animate-fade-in" style={{ animationDelay: "0.7s" }}>
             <button
               onClick={handleOpenInvitation}
               className="group relative px-8 sm:px-12 py-4 sm:py-5 bg-linear-to-r from-rose-400 to-pink-500 text-white text-lg sm:text-xl font-semibold rounded-full shadow-2xl
