@@ -99,7 +99,7 @@ export default function WeddingInvitation() {
               <div className="absolute inset-0 bg-linear-to-r from-pink-500 to-rose-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </button>
             <div
-              className="text-base sm:text-xl md:text-2xl font-nokora text-white mt-3 sm:mt-5 italic animate-slide-up"
+              className="text-base sm:text-xl md:text-2xl mb-10 font-nokora text-white mt-3 sm:mt-5 italic animate-slide-up"
             >
               សូមចុចប៊ូតុងដើម្បីបើកធៀប
             </div>
