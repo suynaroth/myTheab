@@ -86,7 +86,7 @@ export default function WeddingInvitation() {
             </div>
           </div>
 
-          <div className="flex flex-col mt-60 items-center z-10 animate-fade-in" style={{ animationDelay: "0.7s" }}>
+          <div className="flex flex-col mt-30 items-center z-10 animate-fade-in" style={{ animationDelay: "0.7s" }}>
             <button
               onClick={handleOpenInvitation}
               className="group relative px-8 sm:px-12 py-4 sm:py-5 bg-linear-to-r from-rose-400 to-pink-500 text-white text-lg sm:text-xl font-semibold rounded-full shadow-2xl
