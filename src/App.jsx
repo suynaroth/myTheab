@@ -20,14 +20,20 @@ export default function WeddingInvitation() {
 
   const handleOpenInvitation = () => {
     setShowInvitation(true);
-
-    setTimeout(() => {
-      if (audioRef.current) {
-        audioRef.current.play();
-        setIsPlaying(true);
-      }
-    }, 100);
+    setIsPlaying(true);
   };
+
+
+  // const handleOpenInvitation = () => {
+  //   setShowInvitation(true);
+
+  //   setTimeout(() => {
+  //     if (audioRef.current) {
+  //       audioRef.current.play();
+  //       setIsPlaying(true);
+  //     }
+  //   }, 100);
+  // };
 
   const toggleMusic = () => {
     if (audioRef.current) {
@@ -396,7 +402,7 @@ export default function WeddingInvitation() {
               </div>
             </div>
           </div>
-          <div className="mt-3 flex flex-wrap justify-center">
+          <div className="mt-3 justify-center">
             {/* countDownDate */}
             <div class="w-full max-w-2xl justify-center items-center">
               <div class="grid grid-cols-4 sm:grid-cols-4 gap-4 py-4 px-4">
@@ -426,8 +432,8 @@ export default function WeddingInvitation() {
                 </div>
               </div>
             </div>
-            
-            <div className="relative bg-transparent shadow-2xl overflow-hidden">
+
+            <div className="relative bg-transparent z-10 shadow-2xl overflow-hidden">
               {/* Slideshow Container */}
               <div
                 ref={slideRef}
@@ -439,16 +445,24 @@ export default function WeddingInvitation() {
                 {images.map((img, index) => (
                   <div
                     key={index}
-                    className={`absolute inset-0 transition-opacity duration-500 ease-in-out ${index === current ? 'opacity-100' : 'opacity-0'
+                    className={`absolute inset-0 transition-all duration-1000 will-change-transform ${index === current
+                        ? "translate-x-0 opacity-100"
+                        : index < current
+                          ? "-bg-conic-90translate-x-full opacity-0"
+                          : "translate-x-full opacity-0"
                       }`}
                   >
                     <img
                       src={img.url}
                       alt={img.alt}
-                      className="w-full h-full object-cover"
+                      className={`w-full h-full object-cover transition-transform duration-1000ms will-change-transform ${
+                        index === current ? "scale-100" : "scale-110"
+                      }`}
+                      
                     />
                   </div>
                 ))}
+
 
                 {/* Navigation Buttons */}
                 <button
