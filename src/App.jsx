@@ -4,13 +4,10 @@ import { Heart, Calendar, MapPin, Clock, Play, Pause, X, ChevronLeft, ChevronRig
 export default function WeddingInvitation() {
   const [showInvitation, setShowInvitation] = useState(false);
   const [isPlaying, setIsPlaying] = useState(false);
-  const [showRSVP, setShowRSVP] = useState(false);
-  const [formData, setFormData] = useState({
-    name: "",
-    guests: "",
-    message: "",
-  });
   const audioRef = useRef(null);
+
+  const [current, setCurrent] = useState(0);
+  const targetDate = "2025-12-29T00:00:00";
 
   useEffect(() => {
     if (showInvitation && audioRef.current) {
@@ -43,15 +40,6 @@ export default function WeddingInvitation() {
     }
   };
 
-  const handleSubmitRSVP = () => {
-    if (formData.name && formData.guests) {
-      alert(`Thank you ${formData.name}! Your RSVP has been received.`);
-      setShowRSVP(false);
-      setFormData({ name: "", guests: "", message: "" });
-    } else {
-      alert("Please fill in all required fields");
-    }
-  };
   const images = [
     { url: 'images/1.jpg', alt: 'Mountain landscape' },
     { url: 'images/01.jpg', alt: 'Forest path' },
@@ -60,10 +48,8 @@ export default function WeddingInvitation() {
     { url: 'images/04.jpg', alt: 'Canyon vista' }
   ];
 
-  const [current, setCurrent] = useState(0);
   const [touchStart, setTouchStart] = useState(0);
   const [touchEnd, setTouchEnd] = useState(0);
-  const [isSlidePlaying, setIsSlidePlaying] = useState(true);
   const slideRef = useRef(null);
 
   const minSwipeDistance = 50;
@@ -115,11 +101,44 @@ export default function WeddingInvitation() {
     }
   };
 
+  const [timeLeft, setTimeLeft] = useState({
+    days: 0,
+    hours: 0,
+    minutes: 0,
+    seconds: 0,
+  });
+  const pad = (num) => String(num).padStart(2, "0");
+  const { days, hours, minutes, seconds } = timeLeft;
+  useEffect(() => {
+    const countDownDate = new Date(targetDate).getTime();
+
+    const interval = setInterval(() => {
+      const now = new Date().getTime();
+      const distance = countDownDate - now;
+
+      if (distance < 0) {
+        clearInterval(interval);
+        setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+        return;
+      }
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      setTimeLeft({ days, hours, minutes, seconds });
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, [targetDate]);
+
+
   if (!showInvitation) {
     return (
       <div
         className="min-h-screen bg-linear-to-br from-rose-100 via-pink-50
-       to-purple-100 flex flex-col items-center justify-start p-4 overflow-hidden relative"
+       to-purple-100 flex flex-col items-center justify-center p-4 overflow-hidden relative"
       >
         {/* Background image container */}
         <div
@@ -135,15 +154,15 @@ export default function WeddingInvitation() {
               សិរីមង្គលអាពាហ៏ពិពាហ៍
             </h1>
             <div className="item-center mt-5 animate-fade-in">
-              <img src="/images/wedding-mark.png" alt="mark" className="w-56 sm:w-56 mx-auto animate-float" />
+              <img src="/images/wedding-mark.png" alt="mark" className="w-45 sm:w-36 mx-auto animate-float" />
             </div>
 
-            <div
+            {/* <div
               className="text-2xl sm:text-3xl md:text-4xl font-nokora font-extrabold bg-linear-to-r from-yellow-400 via-yellow-500 to-amber-500 bg-clip-text text-transparent 
             text-gold-700 drop-shadow-[0_2px_6px_rgba(0,1,0.5,10)] animate-slide-up pt-2 sm:pt-4"
             >
               សូមគោរពអញ្ជើញ
-            </div>
+            </div> */}
           </div>
 
           <div className="flex flex-col items-center z-10 animate-fade-in pb-4 sm:pb-8" style={{ animationDelay: "0.7s" }}>
@@ -322,14 +341,16 @@ export default function WeddingInvitation() {
             >
               <div className="space-y-4">
                 <div className="relative p-3 rounded-2xl overflow-hidden bg-no-repeat border border-rose-200 shadow-md"
-                  style={{backgroundImage: "url('/images/time-bg.jpg')",
-                  backgroundSize: "cover",
-                  backgroundPosition: "right center",
-                  backgroundRepeat: "no-repeat",}}>
-                  <div className="absolute inset-0 bg-linear-to-r from-white/95 via-white/70 to-white/0 backdrop-blur-[0.5px]"
                   style={{
-                    width: "75%",
-                  }}></div>
+                    backgroundImage: "url('/images/time-bg.jpg')",
+                    backgroundSize: "cover",
+                    backgroundPosition: "right center",
+                    backgroundRepeat: "no-repeat",
+                  }}>
+                  <div className="absolute inset-0 bg-linear-to-r from-white/95 via-white/70 to-white/0 backdrop-blur-[0.5px]"
+                    style={{
+                      width: "75%",
+                    }}></div>
                   <div className="relative z-10 max-w-[60%] sm:max-w-[55%] space-y-6">
                     <div className="flex items-start gap-3 sm:gap-4">
                       <Calendar className="w-6 h-6 sm:w-8 sm:h-8 text-rose-500 shrink-0 mt-1 sm:mt-0" />
@@ -372,15 +393,40 @@ export default function WeddingInvitation() {
                   </span>
                   <div className="absolute inset-0 bg-linear-to-r from-pink-500 to-rose-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </button>
-                {/* <div
-                  className="text-base sm:text-xl md:text-2xl mb-10 font-nokora text-black mt-3 sm:mt-5 italic animate-slide-up"
-                >
-                  សូមចុចប៊ូតុងដើម្បីបើកធៀប
-                </div> */}
               </div>
             </div>
           </div>
-          <div>
+          <div className="mt-3 flex flex-wrap justify-center">
+            {/* countDownDate */}
+            <div class="w-full max-w-2xl justify-center items-center">
+              <div class="grid grid-cols-4 sm:grid-cols-4 gap-4 py-4 px-4">
+                <div class="flex flex-col items-stretch gap-2">
+                  <div class="flex h-24 sm:h-28 md:h-32 grow items-center justify-center rounded-xl px-3 bg-white/50 dark:bg-slate-800/50 backdrop-blur-sm">
+                    <p class="text-slate-900 dark:text-white text-4xl sm:text-5xl md:text-6xl font-black leading-tight tracking-tighter">{pad(days)}</p>
+                  </div>
+                  <div class="flex items-center justify-center"><p class="text-slate-500 dark:text-slate-400 text-sm font-normal uppercase tracking-widest">Days</p></div>
+                </div>
+                <div class="flex flex-col items-stretch gap-2">
+                  <div class="flex h-24 sm:h-28 md:h-32 grow items-center justify-center rounded-xl px-3 bg-white/50 dark:bg-slate-800/50 backdrop-blur-sm">
+                    <p class="text-slate-900 dark:text-white text-4xl sm:text-5xl md:text-6xl font-black leading-tight tracking-tighter">{pad(hours)}</p>
+                  </div>
+                  <div class="flex items-center justify-center"><p class="text-slate-500 dark:text-slate-400 text-sm font-normal uppercase tracking-widest">Hours</p></div>
+                </div>
+                <div class="flex flex-col items-stretch gap-2">
+                  <div class="flex h-24 sm:h-28 md:h-32 grow items-center justify-center rounded-xl px-3 bg-white/50 dark:bg-slate-800/50 backdrop-blur-sm">
+                    <p class="text-slate-900 dark:text-white text-4xl sm:text-5xl md:text-6xl font-black leading-tight tracking-tighter">{pad(minutes)}</p>
+                  </div>
+                  <div class="flex items-center justify-center"><p class="text-slate-500 dark:text-slate-400 text-sm font-normal uppercase tracking-widest">Minutes</p></div>
+                </div>
+                <div class="flex flex-col items-stretch gap-2">
+                  <div class="flex h-24 sm:h-28 md:h-32 grow items-center justify-center rounded-xl px-3 bg-white/50 dark:bg-slate-800/50 backdrop-blur-sm">
+                    <p class="text-slate-900 dark:text-white text-4xl sm:text-5xl md:text-6xl font-black leading-tight tracking-tighter">{pad(seconds)}</p>
+                  </div>
+                  <div class="flex items-center justify-center"><p class="text-slate-500 dark:text-slate-400 text-sm font-normal uppercase tracking-widest">Seconds</p></div>
+                </div>
+              </div>
+            </div>
+            
             <div className="relative bg-transparent shadow-2xl overflow-hidden">
               {/* Slideshow Container */}
               <div
@@ -444,7 +490,7 @@ export default function WeddingInvitation() {
 
 
             <div class="p-6 sm:p-8 md:p-12 bg-white">
-              <h2 className="text-2xl sm:text-3xl text-center whitespace-nowrap font-moulpali bg-linear-to-r from-yellow-500 via-yellow-600 to-amber-300 bg-clip-text text-transparent animate-slide-down bg-white/10 p-3 sm:p-4 rounded-lg">
+              <h2 className="text-lg sm:text-xl text-center whitespace-nowrap font-moulpali bg-linear-to-r from-yellow-500 via-yellow-600 to-amber-300 bg-clip-text text-transparent animate-slide-down bg-white/10 p-3 sm:p-4 rounded-lg">
                 កម្មវិធីមង្គលអាពាហ៍ពិពាហ៍
               </h2>
               <div className="flex items-center justify-center mb-6 sm:mb-8 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
@@ -467,7 +513,7 @@ export default function WeddingInvitation() {
                   <div class="flex flex-1 flex-col pb-6 pt-2">
                     <p class="text-text-light font-nokora bg-linear-to-r from-yellow-500 via-yellow-600 to-amber-300 bg-clip-text text-transparent text-lg font-bold leading-normal">
                       ជួបជុំភ្ញៀវកិត្តិយសរៀបចំពិធីហែជំនូន</p>
-                    <p class="text-lg text-gray-600 font-nokora leading-normal">ម៉ោង ៦៖៣០ នាទីព្រឺក</p>
+                    <p class="text-lg text-gray-600 font-nokora leading-normal">ម៉ោង ៦ : ៣០ នាទីព្រឹក</p>
                   </div>
 
                   {/* <!-- Timeline Item 2 --> */}
@@ -481,7 +527,7 @@ export default function WeddingInvitation() {
                   <div class="flex flex-1 flex-col pb-6 pt-2">
                     <p class="text-text-light font-nokora bg-linear-to-r from-yellow-500 via-yellow-600 to-amber-300 bg-clip-text text-transparent text-lg font-bold leading-normal">
                       ពិធីហែជំនូន(កំណត់) </p>
-                    <p class="text-lg text-gray-600 font-nokora leading-normal">ម៉ោង ៧ : ០០ នាទីព្រឺក</p>
+                    <p class="text-lg text-gray-600 font-nokora leading-normal">ម៉ោង ៧ : ០០ នាទីព្រឹក</p>
                   </div>
 
                   {/* <!-- Timeline Item 3 --> */}
@@ -495,7 +541,7 @@ export default function WeddingInvitation() {
                   <div class="flex flex-1 flex-col pb-6 pt-2">
                     <p class="text-text-light font-nokora bg-linear-to-r from-yellow-500 via-yellow-600 to-amber-300 bg-clip-text text-transparent text-lg font-bold leading-normal">
                       អញ្ញើញភ្ញៀវកិត្តិយសពិសាអាហារពេលព្រឹក</p>
-                    <p class="text-lg text-gray-600 font-nokora leading-normal">ម៉ោង ៧ : ៣០ នាទីព្រឺក</p>
+                    <p class="text-lg text-gray-600 font-nokora leading-normal">ម៉ោង ៧ : ៣០ នាទីព្រឹក</p>
                   </div>
 
                   {/* <!-- Timeline Item 4 --> */}
@@ -509,7 +555,7 @@ export default function WeddingInvitation() {
                   <div class="flex flex-1 flex-col pb-6 pt-2">
                     <p class="text-text-light font-nokora bg-linear-to-r from-yellow-500 via-yellow-600 to-amber-300 bg-clip-text text-transparent text-lg font-bold leading-normal">
                       ពិធីពិសាស្លាកំណត់ និងបំពាក់ចិញ្ចៀន</p>
-                    <p class="text-lg text-gray-600 font-nokora leading-normal">ម៉ោង ៨ : ០០ នាទីព្រឺក</p>
+                    <p class="text-lg text-gray-600 font-nokora leading-normal">ម៉ោង ៨ : ០០ នាទីព្រឹក</p>
                   </div>
 
                   {/* <!-- Timeline Item 5 --> */}
@@ -522,7 +568,7 @@ export default function WeddingInvitation() {
                   <div class="flex flex-1 flex-col pb-6 pt-2">
                     <p class="text-text-light font-nokora bg-linear-to-r from-yellow-500 via-yellow-600 to-amber-300 bg-clip-text text-transparent text-lg font-bold leading-normal">
                       ពិធីសូត្រមន្តចម្រើនព្រះបរិត្ត</p>
-                    <p class="text-lg text-gray-600 font-nokora leading-normal">ម៉ោង ៨ : ៣០ នាទីព្រឺក</p>
+                    <p class="text-lg text-gray-600 font-nokora leading-normal">ម៉ោង ៨ : ៣០ នាទីព្រឹក</p>
                   </div>
                   {/* <!-- Timeline Item 6 --> */}
                   <div class="flex flex-col items-center gap-1 pb-3 relative">
@@ -534,7 +580,7 @@ export default function WeddingInvitation() {
                   <div class="flex flex-1 flex-col pb-6 pt-2">
                     <p class="text-text-light font-nokora bg-linear-to-r from-yellow-500 via-yellow-600 to-amber-300 bg-clip-text text-transparent text-lg font-bold leading-normal">
                       ពិធីកាត់សក់បង្កក់សិរីកូនប្រុសកូនស្រី</p>
-                    <p class="text-lg text-gray-600 font-nokora leading-normal">ម៉ោង ៩ : ៣០ នាទីព្រឺក</p>
+                    <p class="text-lg text-gray-600 font-nokora leading-normal">ម៉ោង ៩ : ៣០ នាទីព្រឹក</p>
                   </div>
                   {/* <!-- Timeline Item 7 --> */}
                   <div class="flex flex-col items-center gap-1 pb-3 relative">
@@ -546,109 +592,14 @@ export default function WeddingInvitation() {
                   <div class="flex flex-1 flex-col pb-6 pt-2">
                     <p class="text-text-light font-nokora bg-linear-to-r from-yellow-500 via-yellow-600 to-amber-300 bg-clip-text text-transparent text-lg font-bold leading-normal">
                       ពិធីបង្វិលពពិល សំពះផ្ទឹមចងដៃ និងបាចផ្កាស្លាពរជ័យ</p>
-                    <p class="text-lg text-gray-600 font-nokora leading-normal">ម៉ោង ១០ : ៣០ នាទីព្រឺក</p>
+                    <p class="text-lg text-gray-600 font-nokora leading-normal">ម៉ោង ១០ : ៣០ នាទីព្រឹក</p>
                   </div>
                 </div>
               </div>
             </div>
-
-
-            <div
-              className="text-center mt-5 animate-fade-in-up px-4"
-              style={{ animationDelay: "1s" }}
-            >
-              <button
-                onClick={() => setShowRSVP(true)}
-                className="px-8 sm:px-12 py-4 sm:py-5 bg-linear-to-r from-rose-500 to-pink-500 text-white text-lg sm:text-xl font-semibold rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 active:scale-95 w-full sm:w-auto"
-              >
-                RSVP Now
-              </button>
-            </div>
-
-            <div
-              className="text-center mt-8 sm:mt-12 animate-fade-in-up px-4"
-              style={{ animationDelay: "1.2s" }}
-            >
-              <p className="text-sm sm:text-base text-gray-600 italic">
-                We can't wait to celebrate with you!
-              </p>
-              <div className="text-3xl sm:text-4xl mt-3 sm:mt-4 animate-pulse">💑</div>
-            </div>
           </div>
         </div>
       </div>
-
-
-
-      {showRSVP && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-3 sm:p-4 z-50 animate-fade-in">
-          <div className="bg-white rounded-2xl sm:rounded-3xl p-6 sm:p-8 max-w-md w-full shadow-2xl animate-scale-in max-h-[90vh] overflow-y-auto">
-            <div className="flex justify-between items-center mb-4 sm:mb-6">
-              <h3 className="text-2xl sm:text-3xl font-serif text-gray-800">RSVP</h3>
-              <button
-                onClick={() => setShowRSVP(false)}
-                className="text-gray-400 hover:text-gray-600 p-1 rounded-full hover:bg-gray-100 active:scale-95 transition-all"
-              >
-                <X className="w-6 h-6" />
-              </button>
-            </div>
-
-            <div className="space-y-3 sm:space-y-4">
-              <div>
-                <label className="block text-gray-700 mb-2 font-semibold text-sm sm:text-base">
-                  Your Name *
-                </label>
-                <input
-                  type="text"
-                  value={formData.name}
-                  onChange={(e) =>
-                    setFormData({ ...formData, name: e.target.value })
-                  }
-                  className="w-full px-3 sm:px-4 py-2.5 sm:py-3 border-2 border-rose-200 rounded-xl focus:border-rose-400 focus:outline-none transition-colors text-sm sm:text-base"
-                  placeholder="Enter your name"
-                />
-              </div>
-
-              <div>
-                <label className="block text-gray-700 mb-2 font-semibold text-sm sm:text-base">
-                  Number of Guests *
-                </label>
-                <input
-                  type="number"
-                  min="1"
-                  value={formData.guests}
-                  onChange={(e) =>
-                    setFormData({ ...formData, guests: e.target.value })
-                  }
-                  className="w-full px-3 sm:px-4 py-2.5 sm:py-3 border-2 border-rose-200 rounded-xl focus:border-rose-400 focus:outline-none transition-colors text-sm sm:text-base"
-                  placeholder="1"
-                />
-              </div>
-
-              <div>
-                <label className="block text-gray-700 mb-2 font-semibold text-sm sm:text-base">
-                  Message (Optional)
-                </label>
-                <textarea
-                  value={formData.message}
-                  onChange={(e) =>
-                    setFormData({ ...formData, message: e.target.value })
-                  }
-                  className="w-full px-3 sm:px-4 py-2.5 sm:py-3 border-2 border-rose-200 rounded-xl focus:border-rose-400 focus:outline-none transition-colors h-20 sm:h-24 text-sm sm:text-base resize-none"
-                  placeholder="Your wishes for the couple..."
-                />
-              </div>
-
-              <button
-                onClick={handleSubmitRSVP}
-                className="w-full py-3 sm:py-4 bg-linear-to-r from-rose-500 to-pink-500 text-white font-semibold rounded-xl hover:shadow-lg transition-all duration-300 hover:scale-105 active:scale-95 text-sm sm:text-base"
-              >
-                Submit RSVP
-              </button>
-            </div>
-          </div>
-        </div>
-      )}
 
       <style>{`
         @keyframes scale-in {
