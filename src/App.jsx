@@ -311,77 +311,68 @@ export default function WeddingInvitation() {
           <div className="p-6 sm:p-8 md:p-12">
             <h2 className="text-xl lg:text-2xl text-center font-moul text-rose-600 mb-4 px-2">សូមគោរពអញ្ជើញ</h2>
             <div className="flex items-center justify-center mb-6 sm:mb-8 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
-              <img src="/images/kbaj_kh.PNG" alt="kbaj_kh" className="w-32 sm:w-32" />
+              <img src="/images/kbaj_kh.PNG" alt="kbaj_kh" className="w-32 sm:w-32 md:w-50" />
             </div>
             <p className="text-center leading-loose font-moulpali  text-gray-700 text-base sm:text-lg md:text-xl mb-8 sm:mb-12 px-4">
               ឯកឧត្តម លោកជំទាវ អ្នកឧកញ៉ា ឧកញ៉ា​ លោក លោកស្រី​ អ្នកនាង កញ្ញា អញ្ជើញចូលរួមជាភ្ញៀវកិត្តិយស ដើម្បីប្រសិទ្ធពរជ័យ សិរីសួស្តីក្នុងកម្មពិធីសិរីមង្គលអាពាហ៍ពិពាហ៍យើងខ្ញុំ
             </p>
             <div
-              className="bg-linear-to-r from-rose-50 to-purple-50 rounded-xl sm:rounded-2xl p-6 sm:p-8 animate-fade-in-up"
+              className="bg-white rounded-xl sm:rounded-2xl animate-fade-in-up"
               style={{ animationDelay: "0.4s" }}
             >
-              <div className="space-y-4 sm:space-y-6">
-                <div className="flex items-start sm:items-center gap-3 sm:gap-4">
-                  <Calendar className="w-6 h-6 sm:w-8 sm:h-8 text-rose-500 shrink-0 mt-1 sm:mt-0" />
-                  <div>
-                    <p className="text-xs sm:text-sm font-nokora text-gray-500 uppercase tracking-wider">
-                      កាលបរិច្ឆេទ
-                    </p>
-                    <p className="text-base sm:text-lg md:text-xl font-nokora text-gray-800 font-semibold">
-                      ថ្ងៃច័ន្ទ ទី​២៩ ខែធ្នូ ឆ្នាំ២០២៥
-                    </p>
-                  </div>
-                </div>
+              <div className="space-y-4">
+                <div className="relative p-6 rounded-2xl overflow-hidden bg-no-repeat bg-right bg-size-[95%_auto]  border border-rose-200 shadow-md"
+                  style={{ backgroundImage: "url('/images/time-bg.jpg')", }}>
+                  {/* <div className="absolute inset-0 bg-linear-to-r from-white/95 via-white/70 to-white/10 backdrop-blur-[0.5px]"></div> */}
+                  <div className="relative z-10 max-w-[60%] sm:max-w-[55%] space-y-6">
+                    <div className="flex items-start gap-3 sm:gap-4">
+                      <Calendar className="w-6 h-6 sm:w-8 sm:h-8 text-rose-500 shrink-0 mt-1 sm:mt-0" />
+                      <div>
+                        <p className="text-base sm:text-sm font-nokora text-gray-800 uppercase tracking-wider">
+                          កាលបរិច្ឆេទ
+                        </p>
+                        <p className="text-lg sm:text-lg md:text-xl font-nokora text-rose-500 font-semibold">
+                          ថ្ងៃច័ន្ទ ទី​២៩ ខែធ្នូ ឆ្នាំ២០២៥
+                        </p>
+                      </div>
+                    </div>
 
-                <div className="flex items-start sm:items-center gap-3 sm:gap-4">
-                  <Clock className="w-6 h-6 sm:w-8 sm:h-8 text-rose-500 shrink-0 mt-1 sm:mt-0" />
-                  <div className="font-nokora">
-                    <p className="text-xs sm:text-sm text-gray-500 uppercase tracking-wider">
-                      កម្មវិធីចាប់ផ្តើមពីម៉ោង
-                    </p>
-                    <p className="text-base sm:text-lg md:text-xl text-gray-800 font-semibold">
-                      ៥ល្ងាចតទៅ
-                    </p>
+                    <div className="flex items-start gap-3">
+                      <MapPin className="w-6 h-6 sm:w-8 sm:h-8 text-rose-500 shrink-0 mt-1 sm:mt-0" />
+                      <div className="font-nokora">
+                        <p className="text-base sm:text-sm text-gray-800 uppercase tracking-wider">
+                          ទីតាំងកម្មវិធី
+                        </p>
+                        <p className="text-lg md:text-xl text-rose-500 font-semibold">
+                          គេហដ្ឋានខាងស្រី​ ​ភូមិសំបូរ ឃុំសំបូរ ស្រុកសំបូរ ខេត្តក្រចេះ
+                        </p>
+                      </div>
+                    </div>
                   </div>
                 </div>
-
-                <div className="flex items-start sm:items-center gap-3 sm:gap-4">
-                  <MapPin className="w-6 h-6 sm:w-8 sm:h-8 text-rose-500 shrink-0 mt-1 sm:mt-0" />
-                  <div className="font-nokora">
-                    <p className="text-xs sm:text-sm text-gray-500 uppercase tracking-wider">
-                      ទីតាំងកម្មវិធី
-                    </p>
-                    <p className="text-base sm:text-lg md:text-xl text-gray-800 font-semibold">
-                      ខេត្តក្រចេះ
-                    </p>
-                    <p className="text-sm sm:text-base text-gray-600">
-                      123 Wedding Street, City, State 12345
-                    </p>
-                  </div>
-                </div>
+              </div>
+              <div className="flex flex-col items-center z-10 animate-fade-in" style={{ animationDelay: "0.7s" }}>
+                <button
+                  onClick={() => window.open(
+                    "https://maps.app.goo.gl/CpNxJaGPN4R52hsaA",
+                    "_blank"
+                  )}
+                  className="group relative px-8 sm:px-12 py-3 sm:py-5 mt-5 bg-linear-to-r from-rose-400 to-pink-500 text-white text-base sm:text-xl font-semibold rounded-full shadow-2xl
+                  hover:shadow-rose-300 transition-all duration-300 hover:scale-110 animate-slide-up overflow-hidden active:scale-95"
+                >
+                  <span className="relative z-10 font-nokora flex items-center gap-2 sm:gap-3">
+                    មើលផែនទី
+                    <MapPin className="w-5 h-5 sm:w-6 sm:h-6 group-hover:animate-ping" />
+                  </span>
+                  <div className="absolute inset-0 bg-linear-to-r from-pink-500 to-rose-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </button>
+                {/* <div
+                  className="text-base sm:text-xl md:text-2xl mb-10 font-nokora text-black mt-3 sm:mt-5 italic animate-slide-up"
+                >
+                  សូមចុចប៊ូតុងដើម្បីបើកធៀប
+                </div> */}
               </div>
             </div>
-            {/* <div
-              className="mb-8 sm:mb-12 animate-fade-in-up"
-              style={{ animationDelay: "0.6s" }}
-            >
-              <h3 className="text-2xl sm:text-3xl font-serif text-center text-gray-800 mb-4 sm:mb-6 px-2">
-                Our Journey
-              </h3>
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4">
-                {[1, 2, 3, 4].map((i) => (
-                  <div
-                    key={i}
-                    className="aspect-square bg-linear-to-br from-rose-200 to-purple-200 rounded-xl sm:rounded-2xl hover:scale-105 active:scale-95 transition-transform duration-300 cursor-pointer shadow-lg hover:shadow-xl flex items-center justify-center text-4xl sm:text-6xl"
-                  >
-                    📷
-                  </div>
-                ))}
-              </div>
-              <p className="text-center text-gray-500 text-xs sm:text-sm mt-3 sm:mt-4 px-2">
-                Click to add your photos
-              </p>
-            </div> */}
           </div>
           <div>
             <div className="relative bg-transparent shadow-2xl overflow-hidden">
@@ -441,6 +432,121 @@ export default function WeddingInvitation() {
               </div>
             </div>
 
+            {/* <div className="item-center mt-5 animate-fade-in">
+              <img src="/images/wedding-mark.png" alt="mark" className="w-30 sm:w-30 md:w-50 mx-auto" />
+            </div> */}
+
+
+            <div class="p-6 sm:p-8 md:p-12 bg-white">
+              <h2 className="text-2xl sm:text-3xl text-center whitespace-nowrap font-moulpali bg-linear-to-r from-yellow-500 via-yellow-600 to-amber-300 bg-clip-text text-transparent animate-slide-down bg-white/10 p-3 sm:p-4 rounded-lg">
+                កម្មវិធីមង្គលអាពាហ៍ពិពាហ៍
+              </h2>
+              <div className="flex items-center justify-center mb-6 sm:mb-8 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
+                <img src="/images/kbaj03.PNG" alt="kbaj_kh" className="w-32 sm:w-32 md:w-50" />
+              </div>
+              <div class="relative">
+                {/* <!-- Vertical Timeline Line --> */}
+                <div class="absolute left-1/2 transform -translate-x-1/2 w-0.5 bg-secondary dark:bg-primary/30 h-full"></div>
+
+                {/* <!-- Timeline Events --> */}
+                <div class="grid grid-cols-[auto_1fr] gap-x-4 -gap-y-2">
+
+                  {/* <!-- Timeline Item 1 --> */}
+                  <div class="flex flex-col items-left gap-1 pt-3 relative">
+                    <div class="text-primary text-3xl">
+                      <img src="/images/kbaj04.PNG" alt="kbaj_kh" className="w-12 sm:w-12 md:w-16" />
+                    </div>
+                    <div class="w-0.5 bg-secondary dark:bg-primary/30 h-2"></div>
+                  </div>
+                  <div class="flex flex-1 flex-col pb-6 pt-2">
+                    <p class="text-text-light font-nokora bg-linear-to-r from-yellow-500 via-yellow-600 to-amber-300 bg-clip-text text-transparent text-lg font-bold leading-normal">
+                      ជួបជុំភ្ញៀវកិត្តិយសរៀបចំពិធីហែជំនូន</p>
+                    <p class="text-lg text-gray-600 font-nokora leading-normal">ម៉ោង ៦៖៣០ នាទីព្រឺក</p>
+                  </div>
+
+                  {/* <!-- Timeline Item 2 --> */}
+                  <div class="flex flex-col items-left gap-1 relative">
+                    <div class="w-0.5 bg-secondary dark:bg-primary/30 h-2"></div>
+                    <div class="text-primary text-3xl">
+                      <img src="/images/kbaj04.PNG" alt="kbaj_kh" className="w-12 sm:w-12 md:w-16" />
+                    </div>
+                    <div class="w-0.5 bg-secondary dark:bg-primary/30 h-2"></div>
+                  </div>
+                  <div class="flex flex-1 flex-col pb-6 pt-2">
+                    <p class="text-text-light font-nokora bg-linear-to-r from-yellow-500 via-yellow-600 to-amber-300 bg-clip-text text-transparent text-lg font-bold leading-normal">
+                      ពិធីហែជំនូន(កំណត់) </p>
+                    <p class="text-lg text-gray-600 font-nokora leading-normal">ម៉ោង ៧ : ០០ នាទីព្រឺក</p>
+                  </div>
+
+                  {/* <!-- Timeline Item 3 --> */}
+                  <div class="flex flex-col items-left gap-1 relative">
+                    <div class="w-0.5 bg-secondary dark:bg-primary/30 h-2"></div>
+                    <div class="text-primary text-3xl">
+                      <img src="/images/kbaj04.PNG" alt="kbaj_kh" className="w-12 sm:w-12 md:w-16" />
+                    </div>
+                    <div class="w-0.5 bg-secondary dark:bg-primary/30 h-2"></div>
+                  </div>
+                  <div class="flex flex-1 flex-col pb-6 pt-2">
+                    <p class="text-text-light font-nokora bg-linear-to-r from-yellow-500 via-yellow-600 to-amber-300 bg-clip-text text-transparent text-lg font-bold leading-normal">
+                      អញ្ញើញភ្ញៀវកិត្តិយសពិសាអាហារពេលព្រឹក</p>
+                    <p class="text-lg text-gray-600 font-nokora leading-normal">ម៉ោង ៧ : ៣០ នាទីព្រឺក</p>
+                  </div>
+
+                  {/* <!-- Timeline Item 4 --> */}
+                  <div class="flex flex-col items-left gap-1 relative">
+                    <div class="w-0.5 bg-secondary dark:bg-primary/30 h-2"></div>
+                    <div class="text-primary text-3xl">
+                      <img src="/images/kbaj04.PNG" alt="kbaj_kh" className="w-12 sm:w-12 md:w-16" />
+                    </div>
+                    <div class="w-0.5 bg-secondary dark:bg-primary/30 h-2"></div>
+                  </div>
+                  <div class="flex flex-1 flex-col pb-6 pt-2">
+                    <p class="text-text-light font-nokora bg-linear-to-r from-yellow-500 via-yellow-600 to-amber-300 bg-clip-text text-transparent text-lg font-bold leading-normal">
+                      ពិធីពិសាស្លាកំណត់ និងបំពាក់ចិញ្ចៀន</p>
+                    <p class="text-lg text-gray-600 font-nokora leading-normal">ម៉ោង ៨ : ០០ នាទីព្រឺក</p>
+                  </div>
+
+                  {/* <!-- Timeline Item 5 --> */}
+                  <div class="flex flex-col items-center gap-1 pb-3 relative">
+                    <div class="w-0.5 bg-secondary dark:bg-primary/30 h-2"></div>
+                    <div class="text-primary text-3xl">
+                      <img src="/images/kbaj04.PNG" alt="kbaj_kh" className="w-12 sm:w-12 md:w-16" />
+                    </div>
+                  </div>
+                  <div class="flex flex-1 flex-col pb-6 pt-2">
+                    <p class="text-text-light font-nokora bg-linear-to-r from-yellow-500 via-yellow-600 to-amber-300 bg-clip-text text-transparent text-lg font-bold leading-normal">
+                      ពិធីសូត្រមន្តចម្រើនព្រះបរិត្ត</p>
+                    <p class="text-lg text-gray-600 font-nokora leading-normal">ម៉ោង ៨ : ៣០ នាទីព្រឺក</p>
+                  </div>
+                  {/* <!-- Timeline Item 6 --> */}
+                  <div class="flex flex-col items-center gap-1 pb-3 relative">
+                    <div class="w-0.5 bg-secondary dark:bg-primary/30 h-2"></div>
+                    <div class="text-primary text-3xl">
+                      <img src="/images/kbaj04.PNG" alt="kbaj_kh" className="w-12 sm:w-12 md:w-16" />
+                    </div>
+                  </div>
+                  <div class="flex flex-1 flex-col pb-6 pt-2">
+                    <p class="text-text-light font-nokora bg-linear-to-r from-yellow-500 via-yellow-600 to-amber-300 bg-clip-text text-transparent text-lg font-bold leading-normal">
+                      ពិធីកាត់សក់បង្កក់សិរីកូនប្រុសកូនស្រី</p>
+                    <p class="text-lg text-gray-600 font-nokora leading-normal">ម៉ោង ៩ : ៣០ នាទីព្រឺក</p>
+                  </div>
+                  {/* <!-- Timeline Item 7 --> */}
+                  <div class="flex flex-col items-center gap-1 pb-3 relative">
+                    <div class="w-0.5 bg-secondary dark:bg-primary/30 h-2"></div>
+                    <div class="text-primary text-3xl">
+                      <img src="/images/kbaj04.PNG" alt="kbaj_kh" className="w-12 sm:w-12 md:w-16" />
+                    </div>
+                  </div>
+                  <div class="flex flex-1 flex-col pb-6 pt-2">
+                    <p class="text-text-light font-nokora bg-linear-to-r from-yellow-500 via-yellow-600 to-amber-300 bg-clip-text text-transparent text-lg font-bold leading-normal">
+                      ពិធីបង្វិលពពិល សំពះផ្ទឹមចងដៃ និងបាចផ្កាស្លាពរជ័យ</p>
+                    <p class="text-lg text-gray-600 font-nokora leading-normal">ម៉ោង ១០ : ៣០ នាទីព្រឺក</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
             <div
               className="text-center mt-5 animate-fade-in-up px-4"
               style={{ animationDelay: "1s" }}
@@ -465,6 +571,8 @@ export default function WeddingInvitation() {
           </div>
         </div>
       </div>
+
+
 
       {showRSVP && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-3 sm:p-4 z-50 animate-fade-in">
