@@ -321,9 +321,9 @@ export default function WeddingInvitation() {
               style={{ animationDelay: "0.4s" }}
             >
               <div className="space-y-4">
-                <div className="relative p-6 rounded-2xl overflow-hidden bg-no-repeat min-h-[250px] sm:min-h-[300px] md:min-h-[350px]  border border-rose-200 shadow-md"
+                <div className="relative p-6 rounded-2xl overflow-hidden bg-no-repeat border border-rose-200 shadow-md"
                   style={{backgroundImage: "url('/images/time-bg.jpg')",
-                  backgroundSize: "contain", // makes it scale responsively
+                  backgroundSize: "contain",
                   backgroundPosition: "right center",
                   backgroundRepeat: "no-repeat",}}>
                   {/* <div className="absolute inset-0 bg-linear-to-r from-white/95 via-white/70 to-white/10 backdrop-blur-[0.5px]"></div> */}
