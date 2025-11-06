@@ -308,7 +308,7 @@ export default function WeddingInvitation() {
               </div>
             </div>
           </div>
-          <div className="p-6 sm:p-8 md:p-12">
+          <div className="p-2 md:p-8">
             <h2 className="text-xl lg:text-2xl text-center font-moul text-rose-600 mb-4 px-2">សូមគោរពអញ្ជើញ</h2>
             <div className="flex items-center justify-center mb-6 sm:mb-8 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
               <img src="/images/kbaj_kh.PNG" alt="kbaj_kh" className="w-32 sm:w-32 md:w-50" />
@@ -321,7 +321,7 @@ export default function WeddingInvitation() {
               style={{ animationDelay: "0.4s" }}
             >
               <div className="space-y-4">
-                <div className="relative p-6 rounded-2xl overflow-hidden bg-no-repeat border border-rose-200 shadow-md"
+                <div className="relative p-3 rounded-2xl overflow-hidden bg-no-repeat border border-rose-200 shadow-md"
                   style={{backgroundImage: "url('/images/time-bg.jpg')",
                   backgroundSize: "cover",
                   backgroundPosition: "right center",
