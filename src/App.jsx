@@ -326,15 +326,18 @@ export default function WeddingInvitation() {
                   backgroundSize: "cover",
                   backgroundPosition: "right center",
                   backgroundRepeat: "no-repeat",}}>
-                  {/* <div className="absolute inset-0 bg-linear-to-r from-white/95 via-white/70 to-white/10 backdrop-blur-[0.5px]"></div> */}
+                  <div className="absolute inset-0 bg-linear-to-r from-white/95 via-white/70 to-white/0 backdrop-blur-[0.5px]"
+                  style={{
+                    width: "75%",
+                  }}></div>
                   <div className="relative z-10 max-w-[60%] sm:max-w-[55%] space-y-6">
                     <div className="flex items-start gap-3 sm:gap-4">
                       <Calendar className="w-6 h-6 sm:w-8 sm:h-8 text-rose-500 shrink-0 mt-1 sm:mt-0" />
                       <div>
-                        <p className="text-base sm:text-sm font-nokora text-rose-500 font-bold tracking-wider">
+                        <p className="text-base sm:text-sm font-nokora text-rose-500 font-semibold tracking-wider">
                           កាលបរិច្ឆេទ
                         </p>
-                        <p className="text-base sm:text-base md:text-xl font-nokora text-gray-800 font-semibold">
+                        <p className="text-base sm:text-base md:text-xl font-nokora text-gray-800">
                           ថ្ងៃច័ន្ទ ទី​២៩ ខែធ្នូ ឆ្នាំ២០២៥
                         </p>
                       </div>
@@ -343,10 +346,10 @@ export default function WeddingInvitation() {
                     <div className="flex items-start gap-3">
                       <MapPin className="w-6 h-6 sm:w-8 sm:h-8 text-rose-500 shrink-0 mt-1 sm:mt-0" />
                       <div className="font-nokora">
-                        <p className="text-base sm:text-sm text-rose-500 font-bold tracking-wider">
+                        <p className="text-base sm:text-sm text-rose-500 font-semibold tracking-wider">
                           ទីតាំងកម្មវិធី
                         </p>
-                        <p className="text-base md:text-xl text-gray-800 font-semibold">
+                        <p className="text-base md:text-xl text-gray-800 ">
                           គេហដ្ឋានខាងស្រី​ ​ភូមិសំបូរ ឃុំសំបូរ ស្រុកសំបូរ ខេត្តក្រចេះ
                         </p>
                       </div>
