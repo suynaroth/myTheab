@@ -331,10 +331,10 @@ export default function WeddingInvitation() {
                     <div className="flex items-start gap-3 sm:gap-4">
                       <Calendar className="w-6 h-6 sm:w-8 sm:h-8 text-rose-500 shrink-0 mt-1 sm:mt-0" />
                       <div>
-                        <p className="text-base sm:text-sm font-nokora text-gray-800 uppercase tracking-wider">
+                        <p className="text-base sm:text-sm font-nokora text-rose-500 font-bold tracking-wider">
                           កាលបរិច្ឆេទ
                         </p>
-                        <p className="text-lg sm:text-lg md:text-xl font-nokora text-rose-500 font-semibold">
+                        <p className="text-base sm:text-base md:text-xl font-nokora text-gray-800 font-semibold">
                           ថ្ងៃច័ន្ទ ទី​២៩ ខែធ្នូ ឆ្នាំ២០២៥
                         </p>
                       </div>
@@ -343,10 +343,10 @@ export default function WeddingInvitation() {
                     <div className="flex items-start gap-3">
                       <MapPin className="w-6 h-6 sm:w-8 sm:h-8 text-rose-500 shrink-0 mt-1 sm:mt-0" />
                       <div className="font-nokora">
-                        <p className="text-base sm:text-sm text-gray-800 uppercase tracking-wider">
+                        <p className="text-base sm:text-sm text-rose-500 font-bold tracking-wider">
                           ទីតាំងកម្មវិធី
                         </p>
-                        <p className="text-lg md:text-xl text-rose-500 font-semibold">
+                        <p className="text-base md:text-xl text-gray-800 font-semibold">
                           គេហដ្ឋានខាងស្រី​ ​ភូមិសំបូរ ឃុំសំបូរ ស្រុកសំបូរ ខេត្តក្រចេះ
                         </p>
                       </div>
