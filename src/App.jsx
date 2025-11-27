@@ -251,7 +251,7 @@ export default function WeddingInvitation() {
   }
 
   return (
-    <div className="min-h-screen bg-linear-to-br from-purple-50 via-pink-50 to-rose-50 p-4 md:p-8
+    <div className="min-h-screen p-4 md:p-8
       bg-[url('/images/floralbg.jpg')] bg-cover bg-center bg-fixed">
       <div className="fixed top-2 right-2 sm:top-4 sm:right-4 z-50">
         <button
@@ -270,7 +270,7 @@ export default function WeddingInvitation() {
       </div>
 
       <div className="max-w-4xl mx-auto">
-        <div className="relative rounded-3xl shadow-2xl overflow-hidden animate-scale-in z-10 bg-transparent">
+        <div className="relative rounded-3xl overflow-hidden animate-scale-in z-10 bg-transparent">
           {/* Image Container */}
           <div className="relative h-auto md:h-64 lg:h-64">
             <img
@@ -344,7 +344,7 @@ export default function WeddingInvitation() {
               ឯកឧត្តម លោកជំទាវ អ្នកឧកញ៉ា ឧកញ៉ា​ លោក លោកស្រី​ អ្នកនាង កញ្ញា អញ្ជើញចូលរួមជាភ្ញៀវកិត្តិយស ដើម្បីប្រសិទ្ធពរជ័យ សិរីសួស្តីក្នុងកម្មពិធីសិរីមង្គលអាពាហ៍ពិពាហ៍យើងខ្ញុំ
             </p>
             <div
-              className="bg-white rounded-xl sm:rounded-2xl animate-fade-in-up"
+              className="rounded-xl sm:rounded-2xl animate-fade-in-up"
               style={{ animationDelay: "0.4s" }}
             >
               <div className="space-y-4">
