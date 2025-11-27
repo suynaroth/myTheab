@@ -251,7 +251,8 @@ export default function WeddingInvitation() {
   }
 
   return (
-    <div className="min-h-screen bg-linear-to-br from-purple-50 via-pink-50 to-rose-50 p-4 md:p-8">
+    <div className="min-h-screen bg-linear-to-br from-purple-50 via-pink-50 to-rose-50 p-4 md:p-8
+      bg-[url('/images/floralbg.jpg')] bg-cover bg-center bg-fixed">
       <div className="fixed top-2 right-2 sm:top-4 sm:right-4 z-50">
         <button
           onClick={toggleMusic}
@@ -269,7 +270,7 @@ export default function WeddingInvitation() {
       </div>
 
       <div className="max-w-4xl mx-auto">
-        <div className="relative rounded-3xl shadow-2xl overflow-hidden animate-scale-in z-10 bg-white">
+        <div className="relative rounded-3xl shadow-2xl overflow-hidden animate-scale-in z-10 bg-transparent">
           {/* Image Container */}
           <div className="relative h-auto md:h-64 lg:h-64">
             <img
@@ -280,20 +281,20 @@ export default function WeddingInvitation() {
 
             {/* Mobile Only: Title OVER the image */}
             <div className="absolute inset-0 flex flex-col items-center justify-start pt-14 text-center px-4 md:hidden">
-              <h1 className="text-2xl sm:text-3xl font-moulpali text-rose-600 mb-3 sm:mb-4 px-2 drop-shadow-lg whitespace-nowrap">
-                សិរីមង្គលអាពាហ៍ពិពាហ៍
+              <h1 className="text-2xl sm:text-3xl whitespace-nowrap font-moulpali bg-linear-to-r from-yellow-300 via-yellow-400 to-amber-300 bg-clip-text text-transparent animate-slide-down bg-white/10 p-3 sm:p-4 rounded-lg">
+                សិរីមង្គលអាពាហ៏ពិពាហ៍
               </h1>
               <p className="text-lg sm:text-xl text-white font-light italic px-2 drop-shadow-md">
                 The Wedding Day
               </p>
               <div className="flex items-center justify-center mt-8 gap-4 sm:gap-6">
-                <h2 className="text-base sm:text-3xl font-moulpali text-rose-600 px-2 drop-shadow-lg whitespace-nowrap">
+                <h2 className="text-base sm:text-3xl whitespace-nowrap font-moulpali bg-linear-to-r from-yellow-300 via-yellow-400 to-amber-300 bg-clip-text text-transparent animate-slide-down bg-white/10 p-3 sm:p-4 rounded-lg">
                   គាត សុខអាន
                 </h2>
 
                 <Heart className="w-12 h-12 sm:w-10 sm:h-10 text-rose-400 fill-rose-500 animate-pulse shrink-0" />
 
-                <h2 className="text-base sm:text-3xl font-moulpali text-rose-600 px-2 drop-shadow-lg whitespace-nowrap">
+                <h2 className="text-base sm:text-3xl whitespace-nowrap font-moulpali bg-linear-to-r from-yellow-300 via-yellow-400 to-amber-300 bg-clip-text text-transparent animate-slide-down bg-white/10 p-3 sm:p-4 rounded-lg">
                   ថេង សៀវទី
                 </h2>
               </div>
@@ -334,7 +335,8 @@ export default function WeddingInvitation() {
             </div>
           </div>
           <div className="p-2 md:p-8">
-            <h2 className="text-xl lg:text-2xl text-center font-moul text-rose-600 mb-4 px-2">សូមគោរពអញ្ជើញ</h2>
+            <h2 className="text-xl lg:text-2xl text-center font-moul bg-linear-to-r from-yellow-300 via-yellow-400 to-amber-300 bg-clip-text text-transparent animate-slide-down bg-white/10 p-3 sm:p-4 rounded-lg">
+              សូមគោរពអញ្ជើញ</h2>
             <div className="flex items-center justify-center mb-6 sm:mb-8 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
               <img src="/images/kbaj_kh.PNG" alt="kbaj_kh" className="w-32 sm:w-32 md:w-50" />
             </div>
@@ -365,7 +367,7 @@ export default function WeddingInvitation() {
                           កាលបរិច្ឆេទ
                         </p>
                         <p className="text-base sm:text-base md:text-xl font-nokora text-gray-800">
-                          ថ្ងៃច័ន្ទ ទី​២៩ ខែធ្នូ ឆ្នាំ២០២៥
+                          ថ្ងៃចន្ទ ទី​២៩ ខែធ្នូ ឆ្នាំ២០២៥
                         </p>
                       </div>
                     </div>
@@ -401,10 +403,46 @@ export default function WeddingInvitation() {
                 </button>
               </div>
             </div>
+
           </div>
+          {/* </div> */}
+
+          <div className="w-full max-w-2xl mx-auto">
+
+            <p className="font-nokora text-center">រាប់ថយក្រោយថ្ងៃកម្មវិធី</p>
+
+            <div class="grid grid-cols-4 sm:grid-cols-4 gap-4 py-4 px-4">
+              <div class="flex flex-col items-stretch gap-2">
+                <div class="flex h-24 sm:h-28 md:h-32 grow items-center justify-center rounded-xl px-3 bg-white/50 dark:bg-slate-800/50 backdrop-blur-sm">
+                  <p class="text-slate-900 dark:text-white text-4xl sm:text-5xl md:text-6xl font-black leading-tight tracking-tighter">{pad(days)}</p>
+                </div>
+                <div class="flex items-center justify-center"><p class="text-slate-500 dark:text-slate-400 text-sm font-normal uppercase tracking-widest">Days</p></div>
+              </div>
+              <div class="flex flex-col items-stretch gap-2">
+                <div class="flex h-24 sm:h-28 md:h-32 grow items-center justify-center rounded-xl px-3 bg-white/50 dark:bg-slate-800/50 backdrop-blur-sm">
+                  <p class="text-slate-900 dark:text-white text-4xl sm:text-5xl md:text-6xl font-black leading-tight tracking-tighter">{pad(hours)}</p>
+                </div>
+                <div class="flex items-center justify-center"><p class="text-slate-500 dark:text-slate-400 text-sm font-normal uppercase tracking-widest">Hours</p></div>
+              </div>
+              <div class="flex flex-col items-stretch gap-2">
+                <div class="flex h-24 sm:h-28 md:h-32 grow items-center justify-center rounded-xl px-3 bg-white/50 dark:bg-slate-800/50 backdrop-blur-sm">
+                  <p class="text-slate-900 dark:text-white text-4xl sm:text-5xl md:text-6xl font-black leading-tight tracking-tighter">{pad(minutes)}</p>
+                </div>
+                <div class="flex items-center justify-center"><p class="text-slate-500 dark:text-slate-400 text-sm font-normal uppercase tracking-widest">Minutes</p></div>
+              </div>
+              <div class="flex flex-col items-stretch gap-2">
+                <div class="flex h-24 sm:h-28 md:h-32 grow items-center justify-center rounded-xl px-3 bg-white/50 dark:bg-slate-800/50 backdrop-blur-sm">
+                  <p class="text-slate-900 dark:text-white text-4xl sm:text-5xl md:text-6xl font-black leading-tight tracking-tighter">{pad(seconds)}</p>
+                </div>
+                <div class="flex items-center justify-center"><p class="text-slate-500 dark:text-slate-400 text-sm font-normal uppercase tracking-widest">Seconds</p></div>
+              </div>
+            </div>
+          </div>
+
+          {/* <div className="relative shadow-2xl overflow-hidden animate-scale-in z-10 bg-white"> */}
           <div className="mt-3 justify-center">
             {/* countDownDate */}
-            <div class="w-full max-w-2xl justify-center items-center">
+            {/* <div class="w-full max-w-2xl justify-center items-center">
               <div class="grid grid-cols-4 sm:grid-cols-4 gap-4 py-4 px-4">
                 <div class="flex flex-col items-stretch gap-2">
                   <div class="flex h-24 sm:h-28 md:h-32 grow items-center justify-center rounded-xl px-3 bg-white/50 dark:bg-slate-800/50 backdrop-blur-sm">
@@ -431,7 +469,7 @@ export default function WeddingInvitation() {
                   <div class="flex items-center justify-center"><p class="text-slate-500 dark:text-slate-400 text-sm font-normal uppercase tracking-widest">Seconds</p></div>
                 </div>
               </div>
-            </div>
+            </div> */}
 
             <div className="relative bg-transparent z-10 shadow-2xl overflow-hidden">
               {/* Slideshow Container */}
@@ -446,19 +484,18 @@ export default function WeddingInvitation() {
                   <div
                     key={index}
                     className={`absolute inset-0 transition-all duration-1000 will-change-transform ${index === current
-                        ? "translate-x-0 opacity-100"
-                        : index < current
-                          ? "-bg-conic-90translate-x-full opacity-0"
-                          : "translate-x-full opacity-0"
+                      ? "translate-x-0 opacity-100"
+                      : index < current
+                        ? "-bg-conic-90translate-x-full opacity-0"
+                        : "translate-x-full opacity-0"
                       }`}
                   >
                     <img
                       src={img.url}
                       alt={img.alt}
-                      className={`w-full h-full object-cover transition-transform duration-1000ms will-change-transform ${
-                        index === current ? "scale-100" : "scale-110"
-                      }`}
-                      
+                      className={`w-full h-full object-cover transition-transform duration-1000ms will-change-transform ${index === current ? "scale-100" : "scale-110"
+                        }`}
+
                     />
                   </div>
                 ))}
@@ -503,7 +540,7 @@ export default function WeddingInvitation() {
             </div> */}
 
 
-            <div class="p-6 sm:p-8 md:p-12 bg-white">
+            <div class="p-6 sm:p-8 md:p-12 bg-transparent">
               <h2 className="text-lg sm:text-xl text-center whitespace-nowrap font-moulpali bg-linear-to-r from-yellow-500 via-yellow-600 to-amber-300 bg-clip-text text-transparent animate-slide-down bg-white/10 p-3 sm:p-4 rounded-lg">
                 កម្មវិធីមង្គលអាពាហ៍ពិពាហ៍
               </h2>
@@ -554,7 +591,7 @@ export default function WeddingInvitation() {
                   </div>
                   <div class="flex flex-1 flex-col pb-6 pt-2">
                     <p class="text-text-light font-nokora bg-linear-to-r from-yellow-500 via-yellow-600 to-amber-300 bg-clip-text text-transparent text-lg font-bold leading-normal">
-                      អញ្ញើញភ្ញៀវកិត្តិយសពិសាអាហារពេលព្រឹក</p>
+                      អញ្ជើញភ្ញៀវកិត្តិយសពិសាអាហារពេលព្រឹក</p>
                     <p class="text-lg text-gray-600 font-nokora leading-normal">ម៉ោង ៧ : ៣០ នាទីព្រឹក</p>
                   </div>
 
@@ -608,9 +645,35 @@ export default function WeddingInvitation() {
                       ពិធីបង្វិលពពិល សំពះផ្ទឹមចងដៃ និងបាចផ្កាស្លាពរជ័យ</p>
                     <p class="text-lg text-gray-600 font-nokora leading-normal">ម៉ោង ១០ : ៣០ នាទីព្រឹក</p>
                   </div>
+                  {/* <!-- Timeline Item 8 --> */}
+                  <div class="flex flex-col items-center gap-1 pb-3 relative">
+                    <div class="w-0.5 bg-secondary dark:bg-primary/30 h-2"></div>
+                    <div class="text-primary text-3xl">
+                      <img src="/images/kbaj04.PNG" alt="kbaj_kh" className="w-12 sm:w-12 md:w-16" />
+                    </div>
+                  </div>
+                  <div class="flex flex-1 flex-col pb-6 pt-2">
+                    <p class="text-text-light font-nokora bg-linear-to-r from-yellow-500 via-yellow-600 to-amber-300 bg-clip-text text-transparent text-lg font-bold leading-normal">
+                      អញ្ញើញភ្ញៀវកិត្តិយសពិសាអាហារថ្ងៃត្រង់</p>
+                    <p class="text-lg text-gray-600 font-nokora leading-normal">ម៉ោង ១២ : ០០ ថ្ងៃត្រង់</p>
+                  </div>
+                  {/* <!-- Timeline Item 8 --> */}
+                  <div class="flex flex-col items-center gap-1 pb-3 relative">
+                    <div class="w-0.5 bg-secondary dark:bg-primary/30 h-2"></div>
+                    <div class="text-primary text-3xl">
+                      <img src="/images/kbaj04.PNG" alt="kbaj_kh" className="w-12 sm:w-12 md:w-16" />
+                    </div>
+                  </div>
+                  <div class="flex flex-1 flex-col pb-6 pt-2">
+                    <p class="text-text-light font-nokora bg-linear-to-r from-yellow-500 via-yellow-600 to-amber-300 bg-clip-text text-transparent text-lg font-bold leading-normal">
+                      ទទួលបដិសណ្ឋារកិច្ចភ្ញៀវកិត្តិយសពិសារ ភោជនាអាហារដោយមេត្រីភាព</p>
+                    <p class="text-lg text-gray-600 font-nokora leading-normal">ម៉ោង ០៥ : ០០​ ល្ងាច </p>
+                  </div>
                 </div>
               </div>
             </div>
+
+
           </div>
         </div>
       </div>
