@@ -281,20 +281,20 @@ export default function WeddingInvitation() {
 
             {/* Mobile Only: Title OVER the image */}
             <div className="absolute inset-0 flex flex-col items-center justify-start pt-14 text-center px-4 md:hidden">
-              <h1 className="text-2xl sm:text-3xl whitespace-nowrap font-moulpali bg-linear-to-r from-yellow-300 via-yellow-400 to-amber-300 bg-clip-text text-transparent animate-slide-down bg-white/10 p-3 sm:p-4 rounded-lg">
+              <h1 className="text-2xl sm:text-3xl whitespace-nowrap font-moulpali bg-linear-to-r from-yellow-500 via-yellow-600 to-amber-300 bg-clip-text text-transparent drop-shadow-2xl animate-slide-down bg-white/10 p-3 sm:p-4 rounded-lg">
                 សិរីមង្គលអាពាហ៏ពិពាហ៍
               </h1>
               <p className="text-lg sm:text-xl text-white font-light italic px-2 drop-shadow-md">
                 The Wedding Day
               </p>
               <div className="flex items-center justify-center mt-8 gap-4 sm:gap-6">
-                <h2 className="text-base sm:text-3xl whitespace-nowrap font-moulpali bg-linear-to-r from-yellow-300 via-yellow-400 to-amber-300 bg-clip-text text-transparent animate-slide-down bg-white/10 p-3 sm:p-4 rounded-lg">
+                <h2 className="text-base sm:text-3xl whitespace-nowrap font-moulpali bg-linear-to-r from-yellow-500 via-yellow-600 to-amber-300 bg-clip-text text-transparent animate-slide-down bg-white/10 p-3 sm:p-4 rounded-lg">
                   គាត សុខអាន
                 </h2>
 
                 <Heart className="w-12 h-12 sm:w-10 sm:h-10 text-rose-400 fill-rose-500 animate-pulse shrink-0" />
 
-                <h2 className="text-base sm:text-3xl whitespace-nowrap font-moulpali bg-linear-to-r from-yellow-300 via-yellow-400 to-amber-300 bg-clip-text text-transparent animate-slide-down bg-white/10 p-3 sm:p-4 rounded-lg">
+                <h2 className="text-base sm:text-3xl whitespace-nowrap font-moulpali bg-linear-to-r from-yellow-500 via-yellow-600 to-amber-300 bg-clip-text text-transparent animate-slide-down bg-white/10 p-3 sm:p-4 rounded-lg">
                   ថេង សៀវទី
                 </h2>
               </div>
@@ -306,7 +306,7 @@ export default function WeddingInvitation() {
             <h1 className="text-3xl lg:text-4xl font-moulpali text-rose-600 mb-4 px-2">
               សិរីមង្គលអាពាហ៍ពិពាហ៍
             </h1>
-            <p className="text-xl lg:text-2xl text-gray-600 font-light italic px-2">
+            <p className="text-xl lg:text-2xl text-[#ef9ab2] font-light italic px-2">
               The Wedding Day
             </p>
 
@@ -335,12 +335,12 @@ export default function WeddingInvitation() {
             </div>
           </div>
           <div className="p-2 md:p-8">
-            <h2 className="text-xl lg:text-2xl text-center font-moul bg-linear-to-r from-yellow-300 via-yellow-400 to-amber-300 bg-clip-text text-transparent animate-slide-down bg-white/10 p-3 sm:p-4 rounded-lg">
+            <h2 className="text-xl lg:text-2xl text-center font-moul text-[#CD9D8A] animate-slide-down bg-white/10 p-3 sm:p-4 rounded-lg">
               សូមគោរពអញ្ជើញ</h2>
             <div className="flex items-center justify-center mb-6 sm:mb-8 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
-              <img src="/images/kbaj_kh.PNG" alt="kbaj_kh" className="w-32 sm:w-32 md:w-50" />
+              <img src="/images/kbaj03.PNG" alt="kbaj_kh" className="w-32 sm:w-32 md:w-50" />
             </div>
-            <p className="text-center leading-loose font-moulpali  text-gray-700 text-base sm:text-lg md:text-xl mb-8 sm:mb-12 px-4">
+            <p className="text-center leading-loose font-moulpali  text-[#CD9D8A] text-base sm:text-lg md:text-xl mb-8 sm:mb-12 px-4">
               ឯកឧត្តម លោកជំទាវ អ្នកឧកញ៉ា ឧកញ៉ា​ លោក លោកស្រី​ អ្នកនាង កញ្ញា អញ្ជើញចូលរួមជាភ្ញៀវកិត្តិយស ដើម្បីប្រសិទ្ធពរជ័យ សិរីសួស្តីក្នុងកម្មពិធីសិរីមង្គលអាពាហ៍ពិពាហ៍យើងខ្ញុំ
             </p>
             <div
@@ -409,7 +409,7 @@ export default function WeddingInvitation() {
 
           <div className="w-full max-w-2xl mx-auto">
 
-            <p className="font-nokora text-center">រាប់ថយក្រោយថ្ងៃកម្មវិធី</p>
+            <p className="font-nokora text-center text-[#CD9D8A]">រាប់ថយក្រោយថ្ងៃកម្មវិធី</p>
 
             <div class="grid grid-cols-4 sm:grid-cols-4 gap-4 py-4 px-4">
               <div class="flex flex-col items-stretch gap-2">
@@ -553,121 +553,132 @@ export default function WeddingInvitation() {
 
                 {/* <!-- Timeline Events --> */}
                 <div class="grid grid-cols-[auto_1fr] gap-x-4 -gap-y-2">
-
-                  {/* <!-- Timeline Item 1 --> */}
-                  <div class="flex flex-col items-left gap-1 pt-3 relative">
+                <div class="flex flex-col items-left gap-1 pt-3 relative">
                     <div class="text-primary text-3xl">
-                      <img src="/images/kbaj04.PNG" alt="kbaj_kh" className="w-12 sm:w-12 md:w-16" />
+                      <img src="/images/ev1.jpg" alt="kbaj_kh" className="w-18 sm:w-12 md:w-16 rounded-xl bg-transparent mix-blend-multiply" />
                     </div>
                     <div class="w-0.5 bg-secondary dark:bg-primary/30 h-2"></div>
                   </div>
                   <div class="flex flex-1 flex-col pb-6 pt-2">
-                    <p class="text-text-light font-nokora bg-linear-to-r from-yellow-500 via-yellow-600 to-amber-300 bg-clip-text text-transparent text-lg font-bold leading-normal">
+                    <p class="text-text-light font-nokora text-[#CD9D8A] text-lg font-semibold leading-normal" >
+                      ពិធីសែនក្រុងពាលី</p>
+                    <p class="text-lg text-[#ef9ab2] font-nokora leading-normal">ម៉ោង ០៦ : ០០ នាទីព្រឹក</p>
+                  </div>
+
+                  {/* <!-- Timeline Item 1 --> */}
+                  <div class="flex flex-col items-left gap-1 pt-3 relative">
+                  <div class="text-primary text-3xl">
+                      <img src="/images/ev2.jpg" alt="kbaj_kh" className="w-18 sm:w-12 md:w-16 rounded-xl bg-transparent mix-blend-multiply" />
+                    </div>
+                    <div class="w-0.5 bg-secondary dark:bg-primary/30 h-2"></div>
+                  </div>
+                  <div class="flex flex-1 flex-col pb-6 pt-2">
+                  <p class="text-text-light font-nokora text-[#CD9D8A] text-lg font-semibold leading-normal" >
                       ជួបជុំភ្ញៀវកិត្តិយសរៀបចំពិធីហែជំនូន</p>
-                    <p class="text-lg text-gray-600 font-nokora leading-normal">ម៉ោង ៦ : ៣០ នាទីព្រឹក</p>
+                    <p class="text-lg text-[#ef9ab2] font-nokora leading-normal">ម៉ោង ០៦ : ៣០ នាទីព្រឹក</p>
                   </div>
 
                   {/* <!-- Timeline Item 2 --> */}
                   <div class="flex flex-col items-left gap-1 relative">
                     <div class="w-0.5 bg-secondary dark:bg-primary/30 h-2"></div>
                     <div class="text-primary text-3xl">
-                      <img src="/images/kbaj04.PNG" alt="kbaj_kh" className="w-12 sm:w-12 md:w-16" />
+                      <img src="/images/ev9.jpg" alt="kbaj_kh" className="w-18 sm:w-12 md:w-16 rounded-xl bg-transparent mix-blend-multiply" />
                     </div>
                     <div class="w-0.5 bg-secondary dark:bg-primary/30 h-2"></div>
                   </div>
                   <div class="flex flex-1 flex-col pb-6 pt-2">
-                    <p class="text-text-light font-nokora bg-linear-to-r from-yellow-500 via-yellow-600 to-amber-300 bg-clip-text text-transparent text-lg font-bold leading-normal">
-                      ពិធីហែជំនូន(កំណត់) </p>
-                    <p class="text-lg text-gray-600 font-nokora leading-normal">ម៉ោង ៧ : ០០ នាទីព្រឹក</p>
+                  <p class="text-text-light font-nokora text-[#CD9D8A] text-lg font-semibold leading-normal" >
+                      ពិធីហែជំនូន(កំណត់)ចូលរោងជ័យ </p>
+                    <p class="text-lg text-[#ef9ab2] font-nokora leading-normal">ម៉ោង ០៧ : ០០ នាទីព្រឹក</p>
                   </div>
 
-                  {/* <!-- Timeline Item 3 --> */}
+                  {/* <!-- Timeline Item 3 -->
                   <div class="flex flex-col items-left gap-1 relative">
                     <div class="w-0.5 bg-secondary dark:bg-primary/30 h-2"></div>
                     <div class="text-primary text-3xl">
-                      <img src="/images/kbaj04.PNG" alt="kbaj_kh" className="w-12 sm:w-12 md:w-16" />
+                      <img src="/images/ev1.jpg" alt="kbaj_kh" className="w-18 sm:w-12 md:w-16 rounded-xl bg-transparent mix-blend-multiply" />
                     </div>
                     <div class="w-0.5 bg-secondary dark:bg-primary/30 h-2"></div>
                   </div>
                   <div class="flex flex-1 flex-col pb-6 pt-2">
-                    <p class="text-text-light font-nokora bg-linear-to-r from-yellow-500 via-yellow-600 to-amber-300 bg-clip-text text-transparent text-lg font-bold leading-normal">
+                  <p class="text-text-light font-nokora text-[#CD9D8A] text-lg font-semibold leading-normal" >
                       អញ្ជើញភ្ញៀវកិត្តិយសពិសាអាហារពេលព្រឹក</p>
-                    <p class="text-lg text-gray-600 font-nokora leading-normal">ម៉ោង ៧ : ៣០ នាទីព្រឹក</p>
-                  </div>
+                    <p class="text-lg text-[#ef9ab2] font-nokora leading-normal">ម៉ោង ៧ : ៣០ នាទីព្រឹក</p>
+                  </div> */}
 
                   {/* <!-- Timeline Item 4 --> */}
                   <div class="flex flex-col items-left gap-1 relative">
                     <div class="w-0.5 bg-secondary dark:bg-primary/30 h-2"></div>
                     <div class="text-primary text-3xl">
-                      <img src="/images/kbaj04.PNG" alt="kbaj_kh" className="w-12 sm:w-12 md:w-16" />
+                      <img src="/images/ev3.jpg" alt="kbaj_kh" className="w-18 sm:w-12 md:w-16 rounded-xl bg-transparent mix-blend-multiply" />
                     </div>
                     <div class="w-0.5 bg-secondary dark:bg-primary/30 h-2"></div>
                   </div>
                   <div class="flex flex-1 flex-col pb-6 pt-2">
-                    <p class="text-text-light font-nokora bg-linear-to-r from-yellow-500 via-yellow-600 to-amber-300 bg-clip-text text-transparent text-lg font-bold leading-normal">
-                      ពិធីពិសាស្លាកំណត់ និងបំពាក់ចិញ្ចៀន</p>
-                    <p class="text-lg text-gray-600 font-nokora leading-normal">ម៉ោង ៨ : ០០ នាទីព្រឹក</p>
+                  <p class="text-text-light font-nokora text-[#CD9D8A] text-lg font-semibold leading-normal" >
+                      ពិធីពិសាស្លាកំណត់ និង អញ្ជើញភ្ញៀវកិត្តិយសពិសាអាហារពេលព្រឹក</p>
+                    <p class="text-lg text-[#ef9ab2] font-nokora leading-normal">ម៉ោង ០៧ : ៣០ នាទីព្រឹក</p>
                   </div>
 
                   {/* <!-- Timeline Item 5 --> */}
                   <div class="flex flex-col items-center gap-1 pb-3 relative">
                     <div class="w-0.5 bg-secondary dark:bg-primary/30 h-2"></div>
                     <div class="text-primary text-3xl">
-                      <img src="/images/kbaj04.PNG" alt="kbaj_kh" className="w-12 sm:w-12 md:w-16" />
+                    <img src="/images/ev4.jpg" alt="kbaj_kh" className="w-18 sm:w-12 md:w-16 rounded-xl bg-transparent mix-blend-multiply" />
                     </div>
                   </div>
                   <div class="flex flex-1 flex-col pb-6 pt-2">
-                    <p class="text-text-light font-nokora bg-linear-to-r from-yellow-500 via-yellow-600 to-amber-300 bg-clip-text text-transparent text-lg font-bold leading-normal">
-                      ពិធីសូត្រមន្តចម្រើនព្រះបរិត្ត</p>
-                    <p class="text-lg text-gray-600 font-nokora leading-normal">ម៉ោង ៨ : ៣០ នាទីព្រឹក</p>
+                  <p class="text-text-light font-nokora text-[#CD9D8A] text-lg font-semibold leading-normal" >
+                      ពិធីបំពាក់ចិញ្ចៀន</p>
+                    <p class="text-lg text-[#ef9ab2] font-nokora leading-normal">ម៉ោង ៨ : ៣០ នាទីព្រឹក</p>
                   </div>
                   {/* <!-- Timeline Item 6 --> */}
                   <div class="flex flex-col items-center gap-1 pb-3 relative">
                     <div class="w-0.5 bg-secondary dark:bg-primary/30 h-2"></div>
                     <div class="text-primary text-3xl">
-                      <img src="/images/kbaj04.PNG" alt="kbaj_kh" className="w-12 sm:w-12 md:w-16" />
+                    <img src="/images/ev5.jpg" alt="kbaj_kh" className="w-18 sm:w-12 md:w-16 rounded-xl bg-transparent mix-blend-multiply" />
                     </div>
                   </div>
                   <div class="flex flex-1 flex-col pb-6 pt-2">
-                    <p class="text-text-light font-nokora bg-linear-to-r from-yellow-500 via-yellow-600 to-amber-300 bg-clip-text text-transparent text-lg font-bold leading-normal">
-                      ពិធីកាត់សក់បង្កក់សិរីកូនប្រុសកូនស្រី</p>
-                    <p class="text-lg text-gray-600 font-nokora leading-normal">ម៉ោង ៩ : ៣០ នាទីព្រឹក</p>
+                  <p class="text-text-light font-nokora text-[#CD9D8A] text-lg font-semibold leading-normal" >
+                      ពិធីកាត់សក់បង្កក់សិរី</p>
+                    <p class="text-lg text-[#ef9ab2] font-nokora leading-normal">ម៉ោង ៩ : ៣០ នាទីព្រឹក</p>
                   </div>
                   {/* <!-- Timeline Item 7 --> */}
                   <div class="flex flex-col items-center gap-1 pb-3 relative">
                     <div class="w-0.5 bg-secondary dark:bg-primary/30 h-2"></div>
                     <div class="text-primary text-3xl">
-                      <img src="/images/kbaj04.PNG" alt="kbaj_kh" className="w-12 sm:w-12 md:w-16" />
+                    <img src="/images/ev6.jpg" alt="kbaj_kh" className="w-18 sm:w-12 md:w-16 rounded-xl bg-transparent mix-blend-multiply" />
                     </div>
                   </div>
                   <div class="flex flex-1 flex-col pb-6 pt-2">
-                    <p class="text-text-light font-nokora bg-linear-to-r from-yellow-500 via-yellow-600 to-amber-300 bg-clip-text text-transparent text-lg font-bold leading-normal">
+                  <p class="text-text-light font-nokora text-[#CD9D8A] text-lg font-semibold leading-normal" >
                       ពិធីបង្វិលពពិល សំពះផ្ទឹមចងដៃ និងបាចផ្កាស្លាពរជ័យ</p>
-                    <p class="text-lg text-gray-600 font-nokora leading-normal">ម៉ោង ១០ : ៣០ នាទីព្រឹក</p>
+                    <p class="text-lg text-[#ef9ab2] font-nokora leading-normal">ម៉ោង ១០ : ៣០ នាទីព្រឹក</p>
                   </div>
                   {/* <!-- Timeline Item 8 --> */}
                   <div class="flex flex-col items-center gap-1 pb-3 relative">
                     <div class="w-0.5 bg-secondary dark:bg-primary/30 h-2"></div>
                     <div class="text-primary text-3xl">
-                      <img src="/images/kbaj04.PNG" alt="kbaj_kh" className="w-12 sm:w-12 md:w-16" />
+                    <img src="/images/ev7.jpg" alt="kbaj_kh" className="w-18 sm:w-12 md:w-16 rounded-xl bg-transparent mix-blend-multiply" />
                     </div>
                   </div>
                   <div class="flex flex-1 flex-col pb-6 pt-2">
-                    <p class="text-text-light font-nokora bg-linear-to-r from-yellow-500 via-yellow-600 to-amber-300 bg-clip-text text-transparent text-lg font-bold leading-normal">
+                  <p class="text-text-light font-nokora text-[#CD9D8A] text-lg font-semibold leading-normal" >
                       អញ្ញើញភ្ញៀវកិត្តិយសពិសាអាហារថ្ងៃត្រង់</p>
-                    <p class="text-lg text-gray-600 font-nokora leading-normal">ម៉ោង ១២ : ០០ ថ្ងៃត្រង់</p>
+                    <p class="text-lg text-[#ef9ab2] font-nokora leading-normal">ម៉ោង ១២ : ០០ ថ្ងៃត្រង់</p>
                   </div>
                   {/* <!-- Timeline Item 8 --> */}
                   <div class="flex flex-col items-center gap-1 pb-3 relative">
                     <div class="w-0.5 bg-secondary dark:bg-primary/30 h-2"></div>
                     <div class="text-primary text-3xl">
-                      <img src="/images/kbaj04.PNG" alt="kbaj_kh" className="w-12 sm:w-12 md:w-16" />
+                    <img src="/images/ev8.jpg" alt="kbaj_kh" className="w-18 sm:w-12 md:w-16 rounded-xl bg-transparent mix-blend-multiply" />
                     </div>
                   </div>
                   <div class="flex flex-1 flex-col pb-6 pt-2">
-                    <p class="text-text-light font-nokora bg-linear-to-r from-yellow-500 via-yellow-600 to-amber-300 bg-clip-text text-transparent text-lg font-bold leading-normal">
+                  <p class="text-text-light font-nokora text-[#CD9D8A] text-lg font-semibold leading-normal" >
                       ទទួលបដិសណ្ឋារកិច្ចភ្ញៀវកិត្តិយសពិសារ ភោជនាអាហារដោយមេត្រីភាព</p>
-                    <p class="text-lg text-gray-600 font-nokora leading-normal">ម៉ោង ០៥ : ០០​ ល្ងាច </p>
+                    <p class="text-lg text-[#ef9ab2] font-nokora leading-normal">ម៉ោង ០៥ : ០០​ ល្ងាច </p>
                   </div>
                 </div>
               </div>
