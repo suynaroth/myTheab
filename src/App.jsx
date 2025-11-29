@@ -47,11 +47,11 @@ export default function WeddingInvitation() {
   };
 
   const images = [
-    { url: 'images/1.jpg', alt: 'Mountain landscape' },
+    { url: 'images/11.jpg', alt: 'Mountain landscape' },
     { url: 'images/01.jpg', alt: 'Forest path' },
     { url: 'images/02.jpg', alt: 'Desert sunset' },
     { url: 'images/03.jpg', alt: 'Ocean waves' },
-    { url: 'images/04.jpg', alt: 'Canyon vista' }
+    { url: 'images/05.jpg', alt: 'Canyon vista' }
   ];
 
   const [touchStart, setTouchStart] = useState(0);
@@ -339,8 +339,9 @@ export default function WeddingInvitation() {
             </div>
           </div>
           <div className="p-2 md:p-8">
-            <h2 className="text-xl lg:text-2xl text-center font-moul text-[#CD9D8A] animate-slide-down bg-white/10 p-3 sm:p-4 rounded-lg">
-              មានកិត្តិយសសូមគោរពអញ្ជើញ</h2>
+            <h2 className="text-lg sm:text-xl text-center whitespace-nowrap font-moulpali bg-linear-to-r from-yellow-500 via-yellow-600 to-amber-300 bg-clip-text text-transparent animate-slide-down bg-white/10 p-3 sm:p-4 rounded-lg">
+                មានកិត្តិយសសូមគោរពអញ្ជើញ
+            </h2>
             <div className="flex items-center justify-center mb-6 sm:mb-8 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
               <img src="/images/kbaj03.PNG" alt="kbaj_kh" className="w-32 sm:w-32 md:w-50" />
             </div>
@@ -565,7 +566,7 @@ export default function WeddingInvitation() {
                   <div class="flex flex-1 flex-col pb-6 pt-2">
                     <p class="text-text-light font-nokora text-[#CD9D8A] text-lg font-semibold leading-normal" >
                       ពិធីសែនក្រុងពាលី</p>
-                    <p class="text-lg text-[#ef9ab2] font-nokora leading-normal">ម៉ោង ០៦ : ០០ នាទីព្រឹក</p>
+                    <p class="text-base text-[#ef9ab2] font-moul leading-normal">ម៉ោង ០៦ : ០០ នាទីព្រឹក</p>
                   </div>
 
                   {/* <!-- Timeline Item 1 --> */}
@@ -578,7 +579,7 @@ export default function WeddingInvitation() {
                   <div class="flex flex-1 flex-col pb-6 pt-2">
                   <p class="text-text-light font-nokora text-[#CD9D8A] text-lg font-semibold leading-normal" >
                       ជួបជុំភ្ញៀវកិត្តិយសរៀបចំពិធីហែជំនូន</p>
-                    <p class="text-lg text-[#ef9ab2] font-nokora leading-normal">ម៉ោង ០៦ : ៣០ នាទីព្រឹក</p>
+                    <p class="text-base text-[#ef9ab2] font-moul leading-normal">ម៉ោង ០៦ : ៣០ នាទីព្រឹក</p>
                   </div>
 
                   {/* <!-- Timeline Item 2 --> */}
@@ -592,7 +593,7 @@ export default function WeddingInvitation() {
                   <div class="flex flex-1 flex-col pb-6 pt-2">
                   <p class="text-text-light font-nokora text-[#CD9D8A] text-lg font-semibold leading-normal" >
                       ពិធីហែជំនូន(កំណត់)ចូលរោងជ័យ </p>
-                    <p class="text-lg text-[#ef9ab2] font-nokora leading-normal">ម៉ោង ០៧ : ០០ នាទីព្រឹក</p>
+                    <p class="text-s text-[#ef9ab2] font-moul leading-normal">ម៉ោង ០៧ : ០០ នាទីព្រឹក</p>
                   </div>
 
                   {/* <!-- Timeline Item 3 -->
@@ -620,7 +621,7 @@ export default function WeddingInvitation() {
                   <div class="flex flex-1 flex-col pb-6 pt-2">
                   <p class="text-text-light font-nokora text-[#CD9D8A] text-lg font-semibold leading-normal" >
                       ពិធីពិសាស្លាកំណត់ និង អញ្ជើញភ្ញៀវកិត្តិយសពិសាអាហារពេលព្រឹក</p>
-                    <p class="text-lg text-[#ef9ab2] font-nokora leading-normal">ម៉ោង ០៧ : ៣០ នាទីព្រឹក</p>
+                    <p class="text-base text-[#ef9ab2] font-moul leading-normal">ម៉ោង ០៧ : ៣០ នាទីព្រឹក</p>
                   </div>
 
                   {/* <!-- Timeline Item 5 --> */}
@@ -633,7 +634,7 @@ export default function WeddingInvitation() {
                   <div class="flex flex-1 flex-col pb-6 pt-2">
                   <p class="text-text-light font-nokora text-[#CD9D8A] text-lg font-semibold leading-normal" >
                       ពិធីបំពាក់ចិញ្ចៀន</p>
-                    <p class="text-lg text-[#ef9ab2] font-nokora leading-normal">ម៉ោង ៨ : ៣០ នាទីព្រឹក</p>
+                    <p class="text-base text-[#ef9ab2] font-moul leading-normal">ម៉ោង ៨ : ៣០ នាទីព្រឹក</p>
                   </div>
                   {/* <!-- Timeline Item 6 --> */}
                   <div class="flex flex-col items-center gap-1 pb-3 relative">
@@ -645,7 +646,7 @@ export default function WeddingInvitation() {
                   <div class="flex flex-1 flex-col pb-6 pt-2">
                   <p class="text-text-light font-nokora text-[#CD9D8A] text-lg font-semibold leading-normal" >
                       ពិធីកាត់សក់បង្កក់សិរី</p>
-                    <p class="text-lg text-[#ef9ab2] font-nokora leading-normal">ម៉ោង ៩ : ៣០ នាទីព្រឹក</p>
+                    <p class="text-base text-[#ef9ab2] font-moul leading-normal">ម៉ោង ៩ : ៣០ នាទីព្រឹក</p>
                   </div>
                   {/* <!-- Timeline Item 7 --> */}
                   <div class="flex flex-col items-center gap-1 pb-3 relative">
@@ -657,7 +658,7 @@ export default function WeddingInvitation() {
                   <div class="flex flex-1 flex-col pb-6 pt-2">
                   <p class="text-text-light font-nokora text-[#CD9D8A] text-lg font-semibold leading-normal" >
                       ពិធីបង្វិលពពិល សំពះផ្ទឹមចងដៃ និងបាចផ្កាស្លាពរជ័យ</p>
-                    <p class="text-lg text-[#ef9ab2] font-nokora leading-normal">ម៉ោង ១០ : ៣០ នាទីព្រឹក</p>
+                    <p class="text-base text-[#ef9ab2] font-moul leading-normal">ម៉ោង ១០ : ៣០ នាទីព្រឹក</p>
                   </div>
                   {/* <!-- Timeline Item 8 --> */}
                   <div class="flex flex-col items-center gap-1 pb-3 relative">
@@ -669,7 +670,7 @@ export default function WeddingInvitation() {
                   <div class="flex flex-1 flex-col pb-6 pt-2">
                   <p class="text-text-light font-nokora text-[#CD9D8A] text-lg font-semibold leading-normal" >
                       អញ្ញើញភ្ញៀវកិត្តិយសពិសាអាហារថ្ងៃត្រង់</p>
-                    <p class="text-lg text-[#ef9ab2] font-nokora leading-normal">ម៉ោង ១២ : ០០ ថ្ងៃត្រង់</p>
+                    <p class="text-base text-[#ef9ab2] font-moul leading-normal">ម៉ោង ១២ : ០០ ថ្ងៃត្រង់</p>
                   </div>
                   {/* <!-- Timeline Item 8 --> */}
                   <div class="flex flex-col items-center gap-1 pb-3 relative">
@@ -681,12 +682,24 @@ export default function WeddingInvitation() {
                   <div class="flex flex-1 flex-col pb-6 pt-2">
                   <p class="text-text-light font-nokora text-[#CD9D8A] text-lg font-semibold leading-normal" >
                       ទទួលបដិសណ្ឋារកិច្ចភ្ញៀវកិត្តិយសពិសារ ភោជនាអាហារដោយមេត្រីភាព</p>
-                    <p class="text-lg text-[#ef9ab2] font-nokora leading-normal">ម៉ោង ០៥ : ០០​ ល្ងាច </p>
+                    <p class="text-base text-[#ef9ab2] font-moul leading-normal">ម៉ោង ០៥ : ០០​ ល្ងាច </p>
                   </div>
                 </div>
               </div>
             </div>
 
+            <h2 className="text-lg sm:text-xl text-center whitespace-nowrap font-moulpali text-[#CD9D8A] animate-slide-down bg-white/10 p-3 sm:p-4 rounded-lg">
+                មានកិត្តិយសសូមគោរពអញ្ជើញ
+            </h2>
+            <p className="text-center leading-loose font-moulpali  text-[#CD9D8A] text-base sm:text-lg md:text-xl sm:mb-12 px-4">
+              ឯកឧត្តម លោកជំទាវ អ្នកឧកញ៉ា ឧកញ៉ា​ លោក លោកស្រី​ អ្នកនាង កញ្ញា អញ្ជើញចូលរួមជាភ្ញៀវកិត្តិយសក្នុង
+            </p>
+            <p className="text-center leading-loose font-moul  text-[#ef9ab2] text-2xl sm:text-lg md:text-xl mt-3 sm:mb-12 px-4">
+              ពិធីហែជំនូន
+            </p>
+            <p className="text-center leading-loose font-moul  text-[#CD9D8A] text-base sm:text-lg md:text-xl sm:mb-12 px-4">
+              ថ្ងៃចន្ទ ទី​២៩ ខែធ្នូ ឆ្នាំ២០២៥ ម៉ោង ០៧ : ០០ នាទីព្រឹក នៅគេហដ្ឋានខាងស្រី​ ​ភូមិសំបូរ ឃុំសំបូរ ស្រុកសំបូរ ខេត្តក្រចេះ
+            </p>
 
           </div>
         </div>
