@@ -416,26 +416,26 @@ export default function WeddingInvitation() {
 
             <div class="grid grid-cols-4 sm:grid-cols-4 gap-4 py-4 px-4">
               <div class="flex flex-col items-stretch gap-2">
-                <div class="flex h-24 sm:h-28 md:h-32 grow items-center justify-center rounded-xl px-3 bg-white/50 dark:bg-slate-800/50 backdrop-blur-sm">
-                  <p class="text-[#CD9D8A] dark:text-white text-4xl sm:text-5xl md:text-6xl font-black leading-tight tracking-tighter">{pad(days)}</p>
+                <div class="flex h-24 sm:h-28 md:h-32 grow items-center justify-center rounded-xl px-3 bg-white/50  backdrop-blur-sm">
+                  <p class="text-[#CD9D8A] text-4xl sm:text-5xl md:text-6xl font-black leading-tight tracking-tighter">{pad(days)}</p>
                 </div>
                 <div class="flex items-center justify-center"><p class="text-slate-500 dark:text-slate-400 text-sm font-normal uppercase tracking-widest">Days</p></div>
               </div>
               <div class="flex flex-col items-stretch gap-2">
-                <div class="flex h-24 sm:h-28 md:h-32 grow items-center justify-center rounded-xl px-3 bg-white/50 dark:bg-slate-800/50 backdrop-blur-sm">
-                  <p class="text-[#CD9D8A] dark:text-white text-4xl sm:text-5xl md:text-6xl font-black leading-tight tracking-tighter">{pad(hours)}</p>
+                <div class="flex h-24 sm:h-28 md:h-32 grow items-center justify-center rounded-xl px-3 bg-white/50  backdrop-blur-sm">
+                  <p class="text-[#CD9D8A]  text-4xl sm:text-5xl md:text-6xl font-black leading-tight tracking-tighter">{pad(hours)}</p>
                 </div>
                 <div class="flex items-center justify-center"><p class="text-slate-500 dark:text-slate-400 text-sm font-normal uppercase tracking-widest">Hours</p></div>
               </div>
               <div class="flex flex-col items-stretch gap-2">
-                <div class="flex h-24 sm:h-28 md:h-32 grow items-center justify-center rounded-xl px-3 bg-white/50 dark:bg-slate-800/50 backdrop-blur-sm">
-                  <p class="text-[#CD9D8A] dark:text-white text-4xl sm:text-5xl md:text-6xl font-black leading-tight tracking-tighter">{pad(minutes)}</p>
+                <div class="flex h-24 sm:h-28 md:h-32 grow items-center justify-center rounded-xl px-3 bg-white/50  backdrop-blur-sm">
+                  <p class="text-[#CD9D8A]  text-4xl sm:text-5xl md:text-6xl font-black leading-tight tracking-tighter">{pad(minutes)}</p>
                 </div>
                 <div class="flex items-center justify-center"><p class="text-slate-500 dark:text-slate-400 text-sm font-normal uppercase tracking-widest">Minutes</p></div>
               </div>
               <div class="flex flex-col items-stretch gap-2">
-                <div class="flex h-24 sm:h-28 md:h-32 grow items-center justify-center rounded-xl px-3 bg-white/50 dark:bg-slate-800/50 backdrop-blur-sm">
-                  <p class="text-[#CD9D8A] dark:text-white text-4xl sm:text-5xl md:text-6xl font-black leading-tight tracking-tighter">{pad(seconds)}</p>
+                <div class="flex h-24 sm:h-28 md:h-32 grow items-center justify-center rounded-xl px-3 bg-white/50  backdrop-blur-sm">
+                  <p class="text-[#CD9D8A]  text-4xl sm:text-5xl md:text-6xl font-black leading-tight tracking-tighter">{pad(seconds)}</p>
                 </div>
                 <div class="flex items-center justify-center"><p class="text-slate-500 dark:text-slate-400 text-sm font-normal uppercase tracking-widest">Seconds</p></div>
               </div>
