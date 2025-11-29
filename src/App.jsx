@@ -361,7 +361,7 @@ export default function WeddingInvitation() {
                   }}>
                   <div className="absolute inset-0 bg-linear-to-r from-white/95 via-white/70 to-white/0 backdrop-blur-[0.5px]"
                     style={{
-                      width: "85%",
+                      width: "70%",
                     }}></div>
                   <div className="relative z-10 max-w-[60%] sm:max-w-[55%] space-y-6">
                     <div className="flex items-start gap-3 sm:gap-4">
