@@ -176,7 +176,7 @@ export default function WeddingInvitation() {
           <div className="flex flex-col items-center z-10 animate-fade-in pb-4 sm:pb-8" style={{ animationDelay: "0.7s" }}>
             <button
               onClick={handleOpenInvitation}
-              className="group relative px-8 sm:px-12 py-3 sm:py-5 bg-linear-to-r from-rose-400 to-pink-500 text-white text-base sm:text-xl font-semibold rounded-full shadow-2xl
+              className="group relative px-8 sm:px-12 py-3 sm:py-5 bg-linear-to-r from-[#468ad8] to-[#80abdb] text-white text-base sm:text-xl font-semibold rounded-full shadow-2xl
                hover:shadow-rose-300 transition-all duration-300 hover:scale-110 animate-slide-up overflow-hidden active:scale-95"
             >
               <span className="relative z-10 font-nokora flex items-center gap-2 sm:gap-3">
@@ -271,9 +271,9 @@ export default function WeddingInvitation() {
           className="bg-white p-3 sm:p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 active:scale-95"
         >
           {isPlaying ? (
-            <Pause className="w-5 h-5 sm:w-6 sm:h-6 text-rose-500" />
+            <Pause className="w-5 h-5 sm:w-6 sm:h-6 text-[#447dbb]" />
           ) : (
-            <Play className="w-5 h-5 sm:w-6 sm:h-6 text-rose-500" />
+            <Play className="w-5 h-5 sm:w-6 sm:h-6 text-[#447dbb]" />
           )}
         </button>
         <audio ref={audioRef} loop>
@@ -317,7 +317,7 @@ export default function WeddingInvitation() {
 
           {/* Desktop Only: Title BELOW the image */}
           <div className="hidden md:block text-center py-10 px-4">
-            <h1 className="text-3xl lg:text-4xl font-moulpali text-rose-600 mb-4 px-2">
+            <h1 className="text-3xl lg:text-4xl whitespace-nowrap font-moul bg-linear-to-r from-yellow-500 via-yellow-600 to-amber-300 bg-clip-text text-transparent drop-shadow-2xl animate-slide-down bg-white/10 p-3 sm:p-4 rounded-lg">
               សិរីមង្គលអាពាហ៍ពិពាហ៍
             </h1>
             <p className="text-xl lg:text-2xl text-[#ef9ab2] font-light italic px-2">
@@ -327,21 +327,21 @@ export default function WeddingInvitation() {
             <div className="flex flex-col mt-5 items-center justify-center text-center mb-8 sm:mb-12 animate-fade-in-up space-y-4 sm:space-y-6" style={{ animationDelay: "0.2s" }}>
               {/* Header names */}
               <div className="flex flex-wrap justify-center gap-6">
-                <h2 className="text-l sm:text-xl md:text-xl font-moulpali text-rose-400 px-2">
+                <h2 className="text-l sm:text-xl md:text-xl font-moul bg-linear-to-r from-yellow-500 via-yellow-600 to-amber-300 bg-clip-text text-transparent animate-slide-down bg-white/10 p-3 sm:p-4 rounded-lg">
                   កូនប្រុសនាម
                 </h2>
 
-                <h2 className="text-l sm:text-xl md:text-xl font-moulpali text-rose-400 px-2">
+                <h2 className="text-l sm:text-xl md:text-xl font-moul bg-linear-to-r from-yellow-500 via-yellow-600 to-amber-300 bg-clip-text text-transparent animate-slide-down bg-white/10 p-3 sm:p-4 rounded-lg">
                   កូនស្រីនាម
                 </h2>
                 <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6">
-                  <h2 className="text-xl sm:text-2xl md:text-3xl font-moulpali text-rose-400 px-2">
+                  <h2 className="text-xl sm:text-2xl md:text-3xl font-moul bg-linear-to-r from-yellow-500 via-yellow-600 to-amber-300 bg-clip-text text-transparent animate-slide-down bg-white/10 p-3 sm:p-4 rounded-lg">
                     គាត សុខអាន
                   </h2>
 
-                  <Heart className="w-12 h-12 sm:w-16 sm:h-16 text-[#5986b9] fill-rose-400 animate-pulse" />
+                  <Heart className="w-12 h-12 sm:w-16 sm:h-16 text-[#558fd1] fill-[#498ad4] animate-pulse" />
 
-                  <h2 className="text-xl sm:text-2xl md:text-3xl font-moulpali text-rose-400 px-2">
+                  <h2 className="text-xl sm:text-2xl md:text-3xl font-moul bg-linear-to-r from-yellow-500 via-yellow-600 to-amber-300 bg-clip-text text-transparent animate-slide-down bg-white/10 p-3 sm:p-4 rounded-lg">
                     ថេង សៀវទី
                   </h2>
                 </div>
@@ -349,8 +349,8 @@ export default function WeddingInvitation() {
             </div>
           </div>
           <div className="p-2 md:p-8">
-            <h2 className="text-lg sm:text-xl text-center whitespace-nowrap font-moulpali bg-linear-to-r from-yellow-500 via-yellow-600 to-amber-300 bg-clip-text text-transparent animate-slide-down bg-white/10 p-3 sm:p-4 rounded-lg">
-              មានកិត្តិយសសូមគោរពអញ្ជើញ
+            <h2 className="text-lg sm:text-xl text-center whitespace-nowrap font-moul bg-linear-to-r from-yellow-500 via-yellow-600 to-amber-300 bg-clip-text text-transparent animate-slide-down bg-white/10 p-3 sm:p-4 rounded-lg">
+              សូមគោរពអញ្ជើញ
             </h2>
             <div className="flex items-center justify-center mb-6 sm:mb-8 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
               <img src="/images/kbaj03.PNG" alt="kbaj_kh" className="w-32 sm:w-32 md:w-50" />
@@ -358,6 +358,9 @@ export default function WeddingInvitation() {
             <p className="text-center leading-loose font-moulpali  text-[#7ca7d6] text-base sm:text-lg md:text-xl mb-8 sm:mb-12 px-4">
               ឯកឧត្តម លោកជំទាវ អ្នកឧកញ៉ា ឧកញ៉ា​ លោក លោកស្រី​ អ្នកនាង កញ្ញា អញ្ជើញចូលរួមជាភ្ញៀវកិត្តិយស ដើម្បីប្រសិទ្ធពរជ័យ សិរីសួស្តីក្នុងកម្មពិធីសិរីមង្គលអាពាហ៍ពិពាហ៍យើងខ្ញុំ
             </p>
+            {/* <p className="text-center leading-loose font-moul  text-[#7ca7d6] text-base sm:text-lg md:text-xl sm:mb-6 px-4">
+              ថ្ងៃចន្ទ ទី ​២៩ ខែធ្នូ ឆ្នាំ ២០២៥ ម៉ោង ០៧:០០ នាទីព្រឹក នៅគេហដ្ឋានខាងស្រី​ ​ភូមិថ្មគ្រែ ឃុំថ្មគ្រែលើ ស្រុកចិត្របុរី ខេត្តក្រចេះ
+            </p> */}
             <div
               className="rounded-xl sm:rounded-2xl animate-fade-in-up"
               style={{ animationDelay: "0.4s" }}
@@ -376,12 +379,12 @@ export default function WeddingInvitation() {
                     }}></div>
                   <div className="relative z-10 max-w-[60%] sm:max-w-[55%] space-y-6">
                     <div className="flex items-start gap-3 sm:gap-4">
-                      <Calendar className="w-6 h-6 sm:w-8 sm:h-8 text-[#EAA4A4] shrink-0 mt-1 sm:mt-0" />
+                      <Calendar className="w-6 h-6 sm:w-8 sm:h-8 text-[#5986b9] shrink-0 mt-1 sm:mt-0" />
                       <div>
-                        <p className="text-base sm:text-sm font-nokora text-[#EAA4A4] font-semibold tracking-wider">
+                        <p className="text-base sm:text-sm font-nokora text-[#5986b9] font-semibold tracking-wider">
                           កាលបរិច្ឆេទ
                         </p>
-                        <p className="text-base sm:text-base md:text-xl font-nokora text-[#B94E48]">
+                        <p className="text-base sm:text-base md:text-xl font-nokora text-[#2F4A66]">
                           ថ្ងៃចន្ទ ទី​២៩ ខែធ្នូ ឆ្នាំ២០២៥
                         </p>
                       </div>
@@ -394,7 +397,7 @@ export default function WeddingInvitation() {
                           ទីតាំងកម្មវិធី
                         </p>
                         <p className="text-base md:text-xl text-[#2F4A66] ">
-                          គេហដ្ឋានខាងស្រី​ ​ភូមិសំបូរ ឃុំសំបូរ ស្រុកសំបូរ ខេត្តក្រចេះ
+                          គេហដ្ឋានខាងស្រី​ ​ភូមិថ្មគ្រែ ឃុំថ្មគ្រែលើ ស្រុកចិត្របុរី ខេត្តក្រចេះ
                         </p>
                       </div>
                     </div>
@@ -402,12 +405,14 @@ export default function WeddingInvitation() {
                 </div>
               </div>
               <div className="flex flex-col items-center z-10 animate-fade-in" style={{ animationDelay: "0.7s" }}>
+              <p className="text-base mt-5 mb-2 sm:text-sm font-nokora text-[#5986b9] tracking-wider">
+                  ចុចប៊ូតុងខាងក្រោមដើម្បីមើលទីតាំងកម្មវិធី                        </p>
                 <button
                   onClick={() => window.open(
                     "https://maps.app.goo.gl/7zRr6hamqatavwzE7",
                     "_blank"
                   )}
-                  className="group relative px-8 sm:px-12 py-3 sm:py-5 mt-5 bg-linear-to-r from-[#468ad8] to-[#80abdb] text-white text-base sm:text-xl font-semibold rounded-full shadow-2xl
+                  className="group relative px-8 sm:px-12 py-3 sm:py-5 mt-2 bg-linear-to-r from-[#468ad8] to-[#80abdb] text-white text-base sm:text-xl font-semibold rounded-full shadow-2xl
                   hover:shadow-rose-300 transition-all duration-300 hover:scale-110 animate-slide-up overflow-hidden active:scale-95"
                 >
                   <span className="relative z-10 font-nokora flex items-center gap-2 sm:gap-3">
@@ -455,36 +460,6 @@ export default function WeddingInvitation() {
 
           {/* <div className="relative shadow-2xl overflow-hidden animate-scale-in z-10 bg-white"> */}
           <div className="mt-3 justify-center">
-            {/* countDownDate */}
-            {/* <div class="w-full max-w-2xl justify-center items-center">
-              <div class="grid grid-cols-4 sm:grid-cols-4 gap-4 py-4 px-4">
-                <div class="flex flex-col items-stretch gap-2">
-                  <div class="flex h-24 sm:h-28 md:h-32 grow items-center justify-center rounded-xl px-3 bg-white/50 dark:bg-slate-800/50 backdrop-blur-sm">
-                    <p class="text-slate-900 dark:text-white text-4xl sm:text-5xl md:text-6xl font-black leading-tight tracking-tighter">{pad(days)}</p>
-                  </div>
-                  <div class="flex items-center justify-center"><p class="text-slate-500 dark:text-slate-400 text-sm font-normal uppercase tracking-widest">Days</p></div>
-                </div>
-                <div class="flex flex-col items-stretch gap-2">
-                  <div class="flex h-24 sm:h-28 md:h-32 grow items-center justify-center rounded-xl px-3 bg-white/50 dark:bg-slate-800/50 backdrop-blur-sm">
-                    <p class="text-slate-900 dark:text-white text-4xl sm:text-5xl md:text-6xl font-black leading-tight tracking-tighter">{pad(hours)}</p>
-                  </div>
-                  <div class="flex items-center justify-center"><p class="text-slate-500 dark:text-slate-400 text-sm font-normal uppercase tracking-widest">Hours</p></div>
-                </div>
-                <div class="flex flex-col items-stretch gap-2">
-                  <div class="flex h-24 sm:h-28 md:h-32 grow items-center justify-center rounded-xl px-3 bg-white/50 dark:bg-slate-800/50 backdrop-blur-sm">
-                    <p class="text-slate-900 dark:text-white text-4xl sm:text-5xl md:text-6xl font-black leading-tight tracking-tighter">{pad(minutes)}</p>
-                  </div>
-                  <div class="flex items-center justify-center"><p class="text-slate-500 dark:text-slate-400 text-sm font-normal uppercase tracking-widest">Minutes</p></div>
-                </div>
-                <div class="flex flex-col items-stretch gap-2">
-                  <div class="flex h-24 sm:h-28 md:h-32 grow items-center justify-center rounded-xl px-3 bg-white/50 dark:bg-slate-800/50 backdrop-blur-sm">
-                    <p class="text-slate-900 dark:text-white text-4xl sm:text-5xl md:text-6xl font-black leading-tight tracking-tighter">{pad(seconds)}</p>
-                  </div>
-                  <div class="flex items-center justify-center"><p class="text-slate-500 dark:text-slate-400 text-sm font-normal uppercase tracking-widest">Seconds</p></div>
-                </div>
-              </div>
-            </div> */}
-
             <div className="relative bg-transparent z-10 shadow-2xl overflow-hidden">
               {/* Slideshow Container */}
               <div
@@ -549,11 +524,6 @@ export default function WeddingInvitation() {
               </div>
             </div>
 
-            {/* <div className="item-center mt-5 animate-fade-in">
-              <img src="/images/wedding-mark.png" alt="mark" className="w-30 sm:w-30 md:w-50 mx-auto" />
-            </div> */}
-
-
             <div class="p-6 sm:p-8 md:p-12 bg-transparent">
               <h2 className="text-lg sm:text-xl text-center whitespace-nowrap font-moulpali bg-linear-to-r from-yellow-500 via-yellow-600 to-amber-300 bg-clip-text text-transparent animate-slide-down bg-white/10 p-3 sm:p-4 rounded-lg">
                 កម្មវិធីមង្គលអាពាហ៍ពិពាហ៍
@@ -605,20 +575,6 @@ export default function WeddingInvitation() {
                       ពិធីហែជំនូន(កំណត់)ចូលរោងជ័យ </p>
                     <p class="text-s text-[#9DB7D1] font-moul leading-normal">ម៉ោង ០៧ : ០០ នាទីព្រឹក</p>
                   </div>
-
-                  {/* <!-- Timeline Item 3 -->
-                  <div class="flex flex-col items-left gap-1 relative">
-                    <div class="w-0.5 bg-secondary dark:bg-primary/30 h-2"></div>
-                    <div class="text-primary text-3xl">
-                      <img src="/images/ev1.jpg" alt="kbaj_kh" className="w-18 sm:w-12 md:w-16 rounded-xl bg-transparent mix-blend-multiply" />
-                    </div>
-                    <div class="w-0.5 bg-secondary dark:bg-primary/30 h-2"></div>
-                  </div>
-                  <div class="flex flex-1 flex-col pb-6 pt-2">
-                  <p class="text-text-light font-nokora text-[#CD9D8A] text-lg font-semibold leading-normal" >
-                      អញ្ជើញភ្ញៀវកិត្តិយសពិសាអាហារពេលព្រឹក</p>
-                    <p class="text-lg text-[#ef9ab2] font-nokora leading-normal">ម៉ោង ៧ : ៣០ នាទីព្រឹក</p>
-                  </div> */}
 
                   {/* <!-- Timeline Item 4 --> */}
                   <div class="flex flex-col items-left gap-1 relative">
@@ -698,17 +654,17 @@ export default function WeddingInvitation() {
               </div>
             </div>
 
-            <h2 className="text-lg sm:text-xl text-center whitespace-nowrap font-moulpali text-[#447dbb] animate-slide-down bg-white/10 p-3 sm:p-4 rounded-lg">
+            <h2 className="text-lg sm:text-xl text-center whitespace-nowrap font-moulpali bg-linear-to-r from-yellow-500 via-yellow-600 to-amber-300 bg-clip-text text-transparent animate-slide-down bg-white/10 p-3 sm:p-4 rounded-lg">
               មានកិត្តិយសសូមគោរពអញ្ជើញ
             </h2>
             <p className="text-center leading-loose font-moulpali  text-[#7ca7d6] text-base sm:text-lg md:text-xl sm:mb-12 px-4">
               ឯកឧត្តម លោកជំទាវ អ្នកឧកញ៉ា ឧកញ៉ា​ លោក លោកស្រី​ អ្នកនាង កញ្ញា អញ្ជើញចូលរួមជាភ្ញៀវកិត្តិយសក្នុង
             </p>
-            <p className="text-center leading-loose font-moul  text-[#447dbb] text-2xl sm:text-lg md:text-xl mt-3 sm:mb-12 px-4">
+            <p className="text-center leading-loose font-moul  bg-linear-to-r from-yellow-500 via-yellow-600 to-amber-300 bg-clip-text text-transparent animate-slide-down bg-white/10 p-3 sm:p-4 rounded-lg text-2xl sm:text-lg md:text-xl mt-3 sm:mb-12 px-4">
               ពិធីហែជំនូន
             </p>
             <p className="text-center leading-loose font-moul  text-[#7ca7d6] text-base sm:text-lg md:text-xl sm:mb-6 px-4">
-              ថ្ងៃចន្ទ ទី​២៩ ខែធ្នូ ឆ្នាំ២០២៥ ម៉ោង ០៧:០០ នាទីព្រឹក នៅគេហដ្ឋានខាងស្រី​ ​ភូមិសំបូរ ឃុំសំបូរ ស្រុកសំបូរ ខេត្តក្រចេះ
+              ថ្ងៃចន្ទ ទី ​២៩ ខែធ្នូ ឆ្នាំ ២០២៥ ម៉ោង ០៧:០០ នាទីព្រឹក នៅគេហដ្ឋានខាងស្រី​ ​ភូមិថ្មគ្រែ ឃុំថ្មគ្រែលើ ស្រុកចិត្របុរី ខេត្តក្រចេះ
             </p>
             {/* drees code */}
 
