@@ -394,7 +394,7 @@ export default function WeddingInvitation() {
               <div className="flex flex-col items-center z-10 animate-fade-in" style={{ animationDelay: "0.7s" }}>
                 <button
                   onClick={() => window.open(
-                    "https://maps.app.goo.gl/N3sqvDbvjU7wDsJD7",
+                    "https://maps.app.goo.gl/7zRr6hamqatavwzE7",
                     "_blank"
                   )}
                   className="group relative px-8 sm:px-12 py-3 sm:py-5 mt-5 bg-linear-to-r from-[#468ad8] to-[#80abdb] text-white text-base sm:text-xl font-semibold rounded-full shadow-2xl
@@ -754,7 +754,6 @@ export default function WeddingInvitation() {
         .font-moulpali {
           font-family: 'Moulpali', sans-serif;
         }
-        .mobile-contain: 'contain';
         
       `}</style>
     </div>
