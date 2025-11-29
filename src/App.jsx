@@ -292,13 +292,13 @@ export default function WeddingInvitation() {
                 The Wedding Day
               </p>
               <div className="flex items-center justify-center mt-8 gap-4 sm:gap-6">
-                <h2 className="text-xl sm:text-3xl whitespace-nowrap font-moul bg-linear-to-r from-yellow-500 via-yellow-600 to-amber-300 bg-clip-text text-transparent animate-slide-down bg-white/10 p-3 sm:p-4 rounded-lg">
+                <h2 className="text-lg sm:text-3xl whitespace-nowrap font-moul bg-linear-to-r from-yellow-500 via-yellow-600 to-amber-300 bg-clip-text text-transparent animate-slide-down bg-white/10 p-3 sm:p-4 rounded-lg">
                   គាត សុខអាន
                 </h2>
 
                 <Heart className="w-12 h-12 sm:w-10 sm:h-10 text-rose-400 fill-rose-500 animate-pulse shrink-0" />
 
-                <h2 className="text-xl sm:text-3xl whitespace-nowrap font-moul bg-linear-to-r from-yellow-500 via-yellow-600 to-amber-300 bg-clip-text text-transparent animate-slide-down bg-white/10 p-3 sm:p-4 rounded-lg">
+                <h2 className="text-lg sm:text-l whitespace-nowrap font-moul bg-linear-to-r from-yellow-500 via-yellow-600 to-amber-300 bg-clip-text text-transparent animate-slide-down bg-white/10 p-3 sm:p-4 rounded-lg">
                   ថេង សៀវទី
                 </h2>
               </div>
