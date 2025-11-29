@@ -153,10 +153,12 @@ export default function WeddingInvitation() {
             backgroundImage: "url('/images/banner.jpg')",
           }}
         ></div>
+        {/* Fade overlay */}
+        <div className="absolute inset-0 bg-linear-to-b from-neutral-900/70 via-neutral-900/30 to-transparent pointer-events-none"></div>
 
         <div className="flex flex-col items-center justify-between flex-1 z-10 w-full max-w-2xl py-4 sm:py-8">
           <div className="text-center space-y-3 sm:space-y-6 animate-fade-in">
-            <h1 className="text-2xl sm:text-3xl whitespace-nowrap font-moulpali bg-linear-to-r from-yellow-300 via-yellow-400 to-amber-300 bg-clip-text text-transparent animate-slide-down bg-white/10 p-3 sm:p-4 rounded-lg">
+            <h1 className="text-2xl sm:text-3xl whitespace-nowrap font-moul bg-linear-to-r from-yellow-300 via-yellow-400 to-amber-300 bg-clip-text text-transparent animate-slide-down bg-white/10 p-3 sm:p-4 rounded-lg">
               សិរីមង្គលអាពាហ៏ពិពាហ៍
             </h1>
             <div className="item-center mt-5 animate-fade-in">
@@ -278,23 +280,25 @@ export default function WeddingInvitation() {
               className="w-full h-full object-cover"
               alt="Wedding celebration"
             />
+            {/* Fade overlay */}
+            <div className="absolute inset-0 bg-linear-to-b from-neutral-900/70 via-neutral-900/30 to-transparent pointer-events-none"></div>
 
             {/* Mobile Only: Title OVER the image */}
             <div className="absolute inset-0 flex flex-col items-center justify-start pt-14 text-center px-4 md:hidden">
-              <h1 className="text-2xl sm:text-3xl whitespace-nowrap font-moulpali bg-linear-to-r from-yellow-500 via-yellow-600 to-amber-300 bg-clip-text text-transparent drop-shadow-2xl animate-slide-down bg-white/10 p-3 sm:p-4 rounded-lg">
+              <h1 className="text-2xl sm:text-3xl whitespace-nowrap font-moul bg-linear-to-r from-yellow-500 via-yellow-600 to-amber-300 bg-clip-text text-transparent drop-shadow-2xl animate-slide-down bg-white/10 p-3 sm:p-4 rounded-lg">
                 សិរីមង្គលអាពាហ៏ពិពាហ៍
               </h1>
               <p className="text-lg sm:text-xl text-white font-light italic px-2 drop-shadow-md">
                 The Wedding Day
               </p>
               <div className="flex items-center justify-center mt-8 gap-4 sm:gap-6">
-                <h2 className="text-base sm:text-3xl whitespace-nowrap font-moulpali bg-linear-to-r from-yellow-500 via-yellow-600 to-amber-300 bg-clip-text text-transparent animate-slide-down bg-white/10 p-3 sm:p-4 rounded-lg">
+                <h2 className="text-xl sm:text-3xl whitespace-nowrap font-moul bg-linear-to-r from-yellow-500 via-yellow-600 to-amber-300 bg-clip-text text-transparent animate-slide-down bg-white/10 p-3 sm:p-4 rounded-lg">
                   គាត សុខអាន
                 </h2>
 
                 <Heart className="w-12 h-12 sm:w-10 sm:h-10 text-rose-400 fill-rose-500 animate-pulse shrink-0" />
 
-                <h2 className="text-base sm:text-3xl whitespace-nowrap font-moulpali bg-linear-to-r from-yellow-500 via-yellow-600 to-amber-300 bg-clip-text text-transparent animate-slide-down bg-white/10 p-3 sm:p-4 rounded-lg">
+                <h2 className="text-xl sm:text-3xl whitespace-nowrap font-moul bg-linear-to-r from-yellow-500 via-yellow-600 to-amber-300 bg-clip-text text-transparent animate-slide-down bg-white/10 p-3 sm:p-4 rounded-lg">
                   ថេង សៀវទី
                 </h2>
               </div>
@@ -336,7 +340,7 @@ export default function WeddingInvitation() {
           </div>
           <div className="p-2 md:p-8">
             <h2 className="text-xl lg:text-2xl text-center font-moul text-[#CD9D8A] animate-slide-down bg-white/10 p-3 sm:p-4 rounded-lg">
-              សូមគោរពអញ្ជើញ</h2>
+              មានកិត្តិយសសូមគោរពអញ្ជើញ</h2>
             <div className="flex items-center justify-center mb-6 sm:mb-8 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
               <img src="/images/kbaj03.PNG" alt="kbaj_kh" className="w-32 sm:w-32 md:w-50" />
             </div>
@@ -357,7 +361,7 @@ export default function WeddingInvitation() {
                   }}>
                   <div className="absolute inset-0 bg-linear-to-r from-white/95 via-white/70 to-white/0 backdrop-blur-[0.5px]"
                     style={{
-                      width: "75%",
+                      width: "85%",
                     }}></div>
                   <div className="relative z-10 max-w-[60%] sm:max-w-[55%] space-y-6">
                     <div className="flex items-start gap-3 sm:gap-4">
@@ -366,7 +370,7 @@ export default function WeddingInvitation() {
                         <p className="text-base sm:text-sm font-nokora text-rose-500 font-semibold tracking-wider">
                           កាលបរិច្ឆេទ
                         </p>
-                        <p className="text-base sm:text-base md:text-xl font-nokora text-gray-800">
+                        <p className="text-base sm:text-base md:text-xl font-nokora text-[#9b6d5b]">
                           ថ្ងៃចន្ទ ទី​២៩ ខែធ្នូ ឆ្នាំ២០២៥
                         </p>
                       </div>
@@ -378,7 +382,7 @@ export default function WeddingInvitation() {
                         <p className="text-base sm:text-sm text-rose-500 font-semibold tracking-wider">
                           ទីតាំងកម្មវិធី
                         </p>
-                        <p className="text-base md:text-xl text-gray-800 ">
+                        <p className="text-base md:text-xl text-[#9b6d5b] ">
                           គេហដ្ឋានខាងស្រី​ ​ភូមិសំបូរ ឃុំសំបូរ ស្រុកសំបូរ ខេត្តក្រចេះ
                         </p>
                       </div>
@@ -408,31 +412,30 @@ export default function WeddingInvitation() {
           {/* </div> */}
 
           <div className="w-full max-w-2xl mx-auto">
-
-            <p className="font-nokora text-center text-[#CD9D8A]">រាប់ថយក្រោយថ្ងៃកម្មវិធី</p>
+            <p className="font-nokora text-xl text-center mt-3 text-[#CD9D8A]">រាប់ថយក្រោយថ្ងៃកម្មវិធី</p>
 
             <div class="grid grid-cols-4 sm:grid-cols-4 gap-4 py-4 px-4">
               <div class="flex flex-col items-stretch gap-2">
                 <div class="flex h-24 sm:h-28 md:h-32 grow items-center justify-center rounded-xl px-3 bg-white/50 dark:bg-slate-800/50 backdrop-blur-sm">
-                  <p class="text-slate-900 dark:text-white text-4xl sm:text-5xl md:text-6xl font-black leading-tight tracking-tighter">{pad(days)}</p>
+                  <p class="text-[#CD9D8A] dark:text-white text-4xl sm:text-5xl md:text-6xl font-black leading-tight tracking-tighter">{pad(days)}</p>
                 </div>
                 <div class="flex items-center justify-center"><p class="text-slate-500 dark:text-slate-400 text-sm font-normal uppercase tracking-widest">Days</p></div>
               </div>
               <div class="flex flex-col items-stretch gap-2">
                 <div class="flex h-24 sm:h-28 md:h-32 grow items-center justify-center rounded-xl px-3 bg-white/50 dark:bg-slate-800/50 backdrop-blur-sm">
-                  <p class="text-slate-900 dark:text-white text-4xl sm:text-5xl md:text-6xl font-black leading-tight tracking-tighter">{pad(hours)}</p>
+                  <p class="text-[#CD9D8A] dark:text-white text-4xl sm:text-5xl md:text-6xl font-black leading-tight tracking-tighter">{pad(hours)}</p>
                 </div>
                 <div class="flex items-center justify-center"><p class="text-slate-500 dark:text-slate-400 text-sm font-normal uppercase tracking-widest">Hours</p></div>
               </div>
               <div class="flex flex-col items-stretch gap-2">
                 <div class="flex h-24 sm:h-28 md:h-32 grow items-center justify-center rounded-xl px-3 bg-white/50 dark:bg-slate-800/50 backdrop-blur-sm">
-                  <p class="text-slate-900 dark:text-white text-4xl sm:text-5xl md:text-6xl font-black leading-tight tracking-tighter">{pad(minutes)}</p>
+                  <p class="text-[#CD9D8A] dark:text-white text-4xl sm:text-5xl md:text-6xl font-black leading-tight tracking-tighter">{pad(minutes)}</p>
                 </div>
                 <div class="flex items-center justify-center"><p class="text-slate-500 dark:text-slate-400 text-sm font-normal uppercase tracking-widest">Minutes</p></div>
               </div>
               <div class="flex flex-col items-stretch gap-2">
                 <div class="flex h-24 sm:h-28 md:h-32 grow items-center justify-center rounded-xl px-3 bg-white/50 dark:bg-slate-800/50 backdrop-blur-sm">
-                  <p class="text-slate-900 dark:text-white text-4xl sm:text-5xl md:text-6xl font-black leading-tight tracking-tighter">{pad(seconds)}</p>
+                  <p class="text-[#CD9D8A] dark:text-white text-4xl sm:text-5xl md:text-6xl font-black leading-tight tracking-tighter">{pad(seconds)}</p>
                 </div>
                 <div class="flex items-center justify-center"><p class="text-slate-500 dark:text-slate-400 text-sm font-normal uppercase tracking-widest">Seconds</p></div>
               </div>
