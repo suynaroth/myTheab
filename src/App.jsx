@@ -255,6 +255,18 @@ export default function WeddingInvitation() {
   return (
     <div className="min-h-screen p-4 md:p-8
       bg-[url('/images/floralblue.png')] bg-size-[110%] md: bg-center bg-no-repeat bg-fixed">
+    {/* <div className="min-h-screen p-4 md:p-8
+      bg-[url('/images/floralblue.png')] bg-size-[110%] md: bg-center bg-no-repeat bg-fixed"> */}
+
+      {/* Top florals - fixed to top */}
+      <div className="fixed top-0 left-0 w-full h-1/2 pointer-events-none z-0
+        bg-[url('/images/floralblue_top.png')] 
+        bg-top bg-contain bg-no-repeat"></div>
+
+      {/* Bottom florals - fixed to bottom */}
+      <div className="fixed bottom-0 left-0 w-full h-1/2 pointer-events-none z-0
+        bg-[url('/images/floralblue_bt.png')] 
+        bg-bottom bg-contain bg-no-repeat"></div>
       <div className="fixed top-2 right-2 sm:top-4 sm:right-4 z-50">
         <button
           onClick={toggleMusic}
