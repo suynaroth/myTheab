@@ -253,8 +253,7 @@ export default function WeddingInvitation() {
   }
 
   return (
-    <div className="min-h-screen p-4 md:p-8 relative 
-      md:bg-[url('/images/floralblue.png')] md:bg-cover md:bg-center">
+    <div className="min-h-screen p-4 md:p-8 relative">
 
       {/* Top florals - ONLY on mobile */}
       <div className="md:hidden fixed top-0 left-0 w-full h-1/2 pointer-events-none z-0
