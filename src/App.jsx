@@ -253,16 +253,17 @@ export default function WeddingInvitation() {
   }
 
   return (
-    <div className="min-h-screen p-4 md:p-8 relative">
+    <div className="min-h-screen p-4 md:p-8 relative 
+      md:bg-[url('/images/floralblue.png')] md:bg-cover md:bg-center">
 
       {/* Top florals - ONLY on mobile */}
       <div className="md:hidden fixed top-0 left-0 w-full h-1/2 pointer-events-none z-0
-        bg-[url('/images/floralblue-top.png')] 
+        bg-[url('/images/floralblue_top.png')] 
         bg-top bg-contain bg-no-repeat"></div>
 
       {/* Bottom florals - ONLY on mobile */}
       <div className="md:hidden fixed bottom-0 left-0 w-full h-1/2 pointer-events-none z-0
-        bg-[url('/images/floralblue-bottom.png')] 
+        bg-[url('/images/floralblue_bt.png')] 
         bg-bottom bg-contain bg-no-repeat"></div>
       <div className="fixed top-2 right-2 sm:top-4 sm:right-4 z-50">
         <button
