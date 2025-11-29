@@ -253,18 +253,17 @@ export default function WeddingInvitation() {
   }
 
   return (
-    <div className="min-h-screen p-4 md:p-8">
-    {/* <div className="min-h-screen p-4 md:p-8
-      bg-[url('/images/floralblue.png')] bg-size-[110%] md: bg-center bg-no-repeat bg-fixed"> */}
+    <div className="min-h-screen p-4 md:p-8 relative 
+      md:bg-[url('/images/floralblue.png')] md:bg-cover md:bg-center">
 
-      {/* Top florals - fixed to top */}
-      <div className="fixed top-0 left-0 w-full h-1/2 pointer-events-none z-0
-        bg-[url('/images/floralblue_top.png')] 
+      {/* Top florals - ONLY on mobile */}
+      <div className="md:hidden fixed top-0 left-0 w-full h-1/2 pointer-events-none z-0
+        bg-[url('/images/floralblue-top.png')] 
         bg-top bg-contain bg-no-repeat"></div>
 
-      {/* Bottom florals - fixed to bottom */}
-      <div className="fixed bottom-0 left-0 w-full h-1/2 pointer-events-none z-0
-        bg-[url('/images/floralblue_bt.png')] 
+      {/* Bottom florals - ONLY on mobile */}
+      <div className="md:hidden fixed bottom-0 left-0 w-full h-1/2 pointer-events-none z-0
+        bg-[url('/images/floralblue-bottom.png')] 
         bg-bottom bg-contain bg-no-repeat"></div>
       <div className="fixed top-2 right-2 sm:top-4 sm:right-4 z-50">
         <button
@@ -722,10 +721,10 @@ export default function WeddingInvitation() {
                 DRESS CODE
               </h2>
               <div className="flex justify-center gap-3 mt-2">
-                <span className="w-10 h-10 rounded-full bg-[#7ca7d6]"></span>
-                <span className="w-10 h-10 rounded-full bg-[#6b96c9]"></span>
-                <span className="w-10 h-10 rounded-full bg-[#5a86bd]"></span>
-                <span className="w-10 h-10 rounded-full bg-[#4977b1]"></span>
+                <span className="w-10 h-10 rounded-full bg-[#f1e4d1]"></span>
+                <span className="w-10 h-10 rounded-full bg-[#d0e6fd]"></span>
+                <span className="w-10 h-10 rounded-full bg-[#0c2333]"></span>
+                <span className="w-10 h-10 rounded-full bg-[#162660]"></span>
               </div>
             </div>
 
