@@ -253,7 +253,13 @@ export default function WeddingInvitation() {
   }
 
   return (
-    <div className="bg-[url('/images/floralblue.png')] bg-cover bg-center bg-fixed">
+    <div className="min-h-screen p-4 md:p-8
+      bg-[url('/images/floralblue.png')]
+      {/* MOBILE: Force 100% width, auto height */}
+      bg-[length:100%_auto] bg-no-repeat bg-top
+      
+      {/* DESKTOP: Switch back to cover */}
+      md:bg-cover md:bg-center md:bg-fixed">
       <div className="fixed top-2 right-2 sm:top-4 sm:right-4 z-50">
         <button
           onClick={toggleMusic}
@@ -753,6 +759,7 @@ export default function WeddingInvitation() {
         .font-moulpali {
           font-family: 'Moulpali', sans-serif;
         }
+        .mobile-contain: 'contain';
         
       `}</style>
     </div>
